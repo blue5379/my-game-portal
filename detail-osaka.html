@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>これぞ！大阪</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #0A0A0B; min-width: 1200px; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Header ── */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; padding: 0 60px; background: #F2F2F4;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo {
+      font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 600;
+      letter-spacing: 4px; color: #FF5C00;
+    }
+    nav { display: flex; gap: 32px; align-items: center; }
+    nav a { font-size: 15px; font-weight: 500; color: #0A0A0B; transition: opacity .2s; }
+    nav a:hover { opacity: .6; }
+    .btn-play {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 24px; background: #FF5C00; color: #fff;
+      border-radius: 100px; font-size: 14px; font-weight: 600;
+      cursor: pointer; border: none; transition: background .2s;
+    }
+    .btn-play:hover { background: #e05000; }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex; align-items: center; gap: 80px;
+      padding: 0 120px; height: 580px; background: #fff;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; gap: 24px;
+      flex: 1; min-width: 0;
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a, .breadcrumb span {
+      font-size: 13px; color: #AAAAB0;
+    }
+    .breadcrumb .current { color: #5A5A60; }
+
+    .badges { display: flex; gap: 10px; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 4px;
+      font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .badge-action { background: rgba(255,92,0,.094); color: #FF5C00; }
+    .badge-scratch { background: #F2F2F4; color: #5A5A60; }
+    .badge-award { background: #FFF8E1; color: #B45309; }
+    .badge-award i { width: 14px; height: 14px; color: #F59E0B; }
+
+    .hero-title {
+      font-family: 'Instrument Serif', serif; font-size: 64px; font-weight: 600;
+      line-height: 1.05; letter-spacing: -2px; color: #0A0A0B;
+    }
+    .hero-desc { font-size: 18px; color: #5A5A60; line-height: 1.6; }
+    .hero-btns { display: flex; align-items: center; gap: 16px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px; background: #FF5C00; color: #fff;
+      border-radius: 100px; font-size: 16px; font-weight: 600;
+      border: none; cursor: pointer; transition: background .2s;
+    }
+    .btn-primary i { width: 18px; height: 18px; }
+    .btn-primary:hover { background: #e05000; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; background: #fff; color: #5A5A60;
+      border-radius: 100px; font-size: 16px; font-weight: 500;
+      border: 1.5px solid #E2E2E6; cursor: pointer; transition: border-color .2s, color .2s;
+    }
+    .btn-outline i { width: 16px; height: 16px; }
+    .btn-outline:hover { border-color: #0A0A0B; color: #0A0A0B; }
+
+    .hero-image {
+      width: 560px; height: 420px; flex-shrink: 0;
+      border-radius: 16px; overflow: hidden;
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ── Award Section ── */
+    .award-section {
+      background: #F2F2F4; padding: 80px 120px;
+      display: flex; flex-direction: column; gap: 48px;
+    }
+    .award-header { display: flex; flex-direction: column; gap: 12px; }
+    .eyebrow {
+      font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600;
+      color: #FF5C00; letter-spacing: 4px; text-transform: uppercase;
+    }
+    .section-title {
+      font-family: 'Instrument Serif', serif; font-size: 40px; font-weight: 600;
+      letter-spacing: -1px; color: #0A0A0B;
+    }
+    .award-card {
+      background: #fff; border-radius: 16px; padding: 48px;
+      display: flex; gap: 60px; align-items: stretch;
+    }
+    .award-left { display: flex; flex-direction: column; gap: 24px; flex: 1; min-width: 0; }
+    .award-quote-label {
+      font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 600;
+      letter-spacing: -0.5px; color: #0A0A0B;
+    }
+    .award-quote-text {
+      font-size: 17px; color: #0A0A0B; line-height: 1.8;
+    }
+    .award-right {
+      width: 360px; flex-shrink: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 24px;
+    }
+    .trophy-bg {
+      width: 200px; height: 200px; border-radius: 100px;
+      background: #FFF8E1; display: flex; align-items: center; justify-content: center;
+    }
+    .trophy-bg i { width: 72px; height: 72px; color: #F59E0B; }
+    .trophy-label {
+      font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 600;
+      letter-spacing: 2px; color: #B45309;
+    }
+    .platform-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; background: #F2F2F4; border-radius: 8px;
+    }
+    .platform-badge i { width: 16px; height: 16px; color: #FF5C00; }
+    .platform-badge span {
+      font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 600; color: #5A5A60;
+    }
+
+    /* ── Features ── */
+    .features {
+      background: #fff; padding: 80px 120px;
+      display: flex; flex-direction: column; gap: 48px;
+    }
+    .features-header { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+    .features-title {
+      font-family: 'Instrument Serif', serif; font-size: 44px; font-weight: 600;
+      letter-spacing: -1px; color: #0A0A0B;
+    }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .feature-card {
+      background: #F2F2F4; border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .feature-title {
+      font-size: 18px; font-weight: 700; color: #0A0A0B;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .feature-title i { width: 20px; height: 20px; color: #FF5C00; flex-shrink: 0; }
+    .feature-desc { font-size: 14px; color: #5A5A60; line-height: 1.6; }
+    .feature-card-img {
+      width: 100%; height: auto; border-radius: 8px;
+      object-fit: contain; display: block;
+    }
+
+    /* ── Screenshot Section ── */
+    .screenshots {
+      background: #F2F2F4; padding: 80px 120px;
+      display: flex; flex-direction: column; gap: 48px;
+    }
+    .screenshots-header { display: flex; flex-direction: column; gap: 12px; }
+    .ss-title {
+      font-family: 'Instrument Serif', serif; font-size: 44px; font-weight: 600;
+      letter-spacing: -1px; color: #0A0A0B;
+    }
+    .ss-desc { font-size: 18px; color: #5A5A60; line-height: 1.6; }
+    .viewer-wrapper { display: flex; align-items: center; gap: 16px; }
+    .viewer-btn {
+      width: 48px; height: 48px; border-radius: 24px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; cursor: pointer; border: none; transition: opacity .2s;
+    }
+    .viewer-btn.secondary { background: #F2F2F4; color: #0A0A0B; border: 1px solid #D0D0D5; }
+    .viewer-btn.primary   { background: #FF5C00; color: #fff; }
+    .viewer-btn:hover { opacity: .8; }
+    .main-content { display: flex; flex-direction: column; gap: 12px; flex: 1; min-width: 0; }
+    .main-image {
+      width: 100%; height: 540px; border-radius: 12px;
+      overflow: hidden; background: #E8E8EC;
+    }
+    .main-image img {
+      width: 100%; height: 100%; object-fit: contain;
+      transition: opacity .25s;
+    }
+    .thumb-strip {
+      display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .thumb-strip::-webkit-scrollbar { display: none; }
+    .thumb {
+      width: 80px; height: 72px; border-radius: 6px; overflow: hidden;
+      flex-shrink: 0; cursor: pointer;
+      border: 2px solid transparent; transition: border-color .2s, opacity .2s;
+      background: #E8E8EC;
+    }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb.active { border-color: #FF5C00; }
+    .thumb:not(.active) { opacity: .6; }
+    .thumb:not(.active):hover { opacity: 1; }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      background: #fff; padding: 100px 120px;
+      display: flex; flex-direction: column; align-items: center; gap: 32px;
+    }
+    .cta-deco { width: 80px; height: 4px; background: #FF5C00; border-radius: 2px; }
+    .cta-title {
+      font-family: 'Instrument Serif', serif; font-size: 52px; font-weight: 600;
+      letter-spacing: -1px; text-align: center; color: #0A0A0B; max-width: 800px;
+    }
+    .cta-sub {
+      font-size: 18px; color: #5A5A60; text-align: center;
+      line-height: 1.5; max-width: 600px;
+    }
+    .cta-btns { display: flex; align-items: center; gap: 16px; }
+    .btn-cta-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 16px 40px; background: #FF5C00; color: #fff;
+      border-radius: 100px; font-size: 16px; font-weight: 700;
+      border: none; cursor: pointer; transition: background .2s;
+    }
+    .btn-cta-primary i { width: 18px; height: 18px; }
+    .btn-cta-primary:hover { background: #e05000; }
+    .btn-cta-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 40px; background: #fff; color: #5A5A60;
+      border-radius: 100px; font-size: 16px; font-weight: 500;
+      border: 1.5px solid #E2E2E6; cursor: pointer; transition: border-color .2s, color .2s;
+    }
+    .btn-cta-outline i { width: 16px; height: 16px; }
+    .btn-cta-outline:hover { border-color: #0A0A0B; color: #0A0A0B; }
+
+    /* ── Footer ── */
+    footer {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #F2F2F4; padding: 40px 60px;
+    }
+    .footer-logo {
+      font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 600;
+      letter-spacing: 4px; color: #FF5C00;
+    }
+    .footer-links { display: flex; gap: 32px; align-items: center; }
+    .footer-links a { font-size: 14px; color: #5A5A60; transition: color .2s; }
+    .footer-links a:hover { color: #0A0A0B; }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">これぞ！大阪</div>
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="index.html">ゲーム一覧</a>
+    <a href="#">About</a>
+  </nav>
+  <a href="https://scratch.mit.edu/projects/795340064/" target="_blank" class="btn-play">今すぐプレイ</a>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="breadcrumb">
+      <a href="index.html">ゲーム一覧</a>
+      <span>/</span>
+      <span class="current">これぞ！大阪</span>
+    </div>
+    <div class="badges">
+      <span class="badge badge-action">アクション</span>
+      <span class="badge badge-scratch">Scratch</span>
+      <span class="badge badge-award">
+        <i data-lucide="trophy"></i>
+        最優秀賞
+      </span>
+    </div>
+    <h1 class="hero-title">これぞ！大阪</h1>
+    <p class="hero-desc">OSAKAキッズプログラミングコンテスト2022 最優秀賞受賞作品。大阪の歴史や文化を楽しみながら学べるアクションゲーム。</p>
+    <div class="hero-btns">
+      <a href="https://scratch.mit.edu/projects/795340064/" target="_blank" class="btn-primary">
+        <i data-lucide="play"></i>
+        Scratchで遊ぶ
+      </a>
+      <a href="https://www.pref.osaka.lg.jp/o060020/senryaku_kikaku/kidsprograming/interview2022.html" target="_blank" class="btn-outline">
+        <i data-lucide="external-link"></i>
+        受賞インタビューを読む
+      </a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="./images/game/osaka/これぞ！大阪-メイン.png" alt="これぞ！大阪">
+  </div>
+</section>
+
+<!-- Award Section -->
+<section class="award-section">
+  <div class="award-header">
+    <div class="eyebrow">AWARD</div>
+    <h2 class="section-title">OSAKAキッズプログラミングコンテスト2022 最優秀賞受賞</h2>
+  </div>
+  <div class="award-card">
+    <div class="award-left">
+      <div class="award-quote-label">受賞コメント</div>
+      <p class="award-quote-text">この作品は、ゲームや大阪の歴史、大阪に関係あるアイテムを飾れる部屋など、大阪の魅力を知ってもらう要素が沢山あります。また、ゲームクリアでゲットしたアイテムを飾ったり、獲得した大阪コインで、大阪の歴史について読めたりするなど、楽しみながら大阪について興味を持ってもらえるよう工夫しました。僕は大阪が大好きなので、この作品で大阪について興味を持ってもらいたいです。</p>
+    </div>
+    <div class="award-right">
+      <div class="trophy-bg">
+        <i data-lucide="trophy"></i>
+      </div>
+      <div class="trophy-label">最優秀賞</div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <div class="features-header">
+    <div class="eyebrow">FEATURES</div>
+    <h2 class="features-title">ゲームの特徴</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-title"><i data-lucide="gamepad-2"></i>アクションゲーム</div>
+      <p class="feature-desc">大阪を舞台にしたアクションゲームをプレイ！ゲームをクリアするとアイテムをゲットできる。</p>
+      <img class="feature-card-img" src="./images/game/osaka/action.png" alt="アクションゲーム">
+    </div>
+    <div class="feature-card">
+      <div class="feature-title"><i data-lucide="house"></i>アイテム部屋</div>
+      <p class="feature-desc">ゲットしたアイテムを自分だけの部屋に飾れる。大阪にゆかりのあるアイテムを集めよう！</p>
+      <img class="feature-card-img" src="./images/game/osaka/room.png" alt="アイテム部屋">
+    </div>
+    <div class="feature-card">
+      <div class="feature-title"><i data-lucide="book-open"></i>大阪コイン図書館</div>
+      <p class="feature-desc">獲得した大阪コインを使って大阪の歴史を読める。楽しみながら大阪のことを深く知れる。</p>
+      <img class="feature-card-img" src="./images/game/osaka/library.png" alt="大阪コイン図書館">
+    </div>
+  </div>
+</section>
+
+<!-- Screenshot Section -->
+<section class="screenshots">
+  <div class="screenshots-header">
+    <div class="eyebrow">GAMEPLAY</div>
+    <h2 class="ss-title">大阪を感じるゲーム世界</h2>
+    <p class="ss-desc">大阪名所をモチーフにしたステージで戦い、大阪コインを集めてクリアしよう。部屋に飾ったアイテムが大阪の歴史への扉を開く。</p>
+  </div>
+  <div class="viewer-wrapper">
+    <button class="viewer-btn secondary" id="prevBtn">‹</button>
+    <div class="main-content">
+      <div class="main-image">
+        <img id="mainImg" src="./images/game/osaka/スクリーンショット 2026-03-28 184323.png" alt="screenshot">
+      </div>
+      <div class="thumb-strip" id="thumbStrip"></div>
+    </div>
+    <button class="viewer-btn primary" id="nextBtn">›</button>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-deco"></div>
+  <h2 class="cta-title">大阪の魅力を体験しよう</h2>
+  <p class="cta-sub">Scratchで今すぐ無料でプレイできます。大阪コインを集めて、大阪の歴史を学ぼう！</p>
+  <div class="cta-btns">
+    <a href="https://scratch.mit.edu/projects/795340064/" target="_blank" class="btn-cta-primary">
+      <i data-lucide="play"></i>
+      Scratchで遊ぶ
+    </a>
+    <a href="https://www.pref.osaka.lg.jp/o060020/senryaku_kikaku/kidsprograming/interview2022.html" target="_blank" class="btn-cta-outline">
+      <i data-lucide="newspaper"></i>
+      受賞インタビュー記事
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">これぞ！大阪</div>
+  <div class="footer-links">
+    <a href="index.html">ホーム</a>
+    <a href="index.html">ゲーム一覧</a>
+    <a href="#">About</a>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // Screenshots slider
+  const ssImages = [
+    './images/game/osaka/スクリーンショット 2026-03-28 184323.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184341.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184355.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184408.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184506.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184519.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184738.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184808.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184925.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 184942.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 185000.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 185114.png',
+    './images/game/osaka/スクリーンショット 2026-03-28 185310.png',
+  ];
+
+  let currentIndex = 0;
+  const mainImg = document.getElementById('mainImg');
+  const thumbStrip = document.getElementById('thumbStrip');
+
+  ssImages.forEach((src, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'thumb' + (i === 0 ? ' active' : '');
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'thumb ' + (i + 1);
+    thumb.appendChild(img);
+    thumb.addEventListener('click', () => setImage(i));
+    thumbStrip.appendChild(thumb);
+  });
+
+  function setImage(index) {
+    currentIndex = (index + ssImages.length) % ssImages.length;
+    mainImg.style.opacity = '0';
+    setTimeout(() => {
+      mainImg.src = ssImages[currentIndex];
+      mainImg.style.opacity = '1';
+    }, 150);
+    document.querySelectorAll('.thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === currentIndex);
+    });
+    const thumb = thumbStrip.children[currentIndex];
+    if (thumb) {
+      const sl = thumbStrip.scrollLeft, sr = sl + thumbStrip.clientWidth;
+      const tl = thumb.offsetLeft, tr = tl + thumb.offsetWidth;
+      if (tl < sl) thumbStrip.scrollLeft = tl - 8;
+      else if (tr > sr) thumbStrip.scrollLeft = tr - thumbStrip.clientWidth + 8;
+    }
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => setImage(currentIndex - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => setImage(currentIndex + 1));
+</script>
+</body>
+</html>

@@ -19,19 +19,8 @@
     }
     .logo {
       font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 600;
-      letter-spacing: 4px; color: #FF5C00; text-transform: uppercase;
+      letter-spacing: 4px; color: #FF5C00;
     }
-    nav { display: flex; gap: 32px; align-items: center; }
-    nav a { font-size: 14px; font-weight: 500; color: #5A5A60; transition: color .2s; }
-    nav a:first-child { color: #0A0A0B; }
-    nav a:hover { color: #0A0A0B; }
-    .btn-login {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 10px 24px; background: rgba(255,92,0,.094); color: #FF5C00;
-      border-radius: 100px; font-size: 13px; font-weight: 600; cursor: pointer;
-      border: 1px solid #FF5C00; transition: background .2s;
-    }
-    .btn-login:hover { background: rgba(255,92,0,.15); }
 
     /* Hero Banner */
     .hero-banner {
@@ -40,8 +29,8 @@
       height: 320px; justify-content: center;
     }
     .eyebrow {
-      font-size: 12px; font-weight: 600; color: #FF5C00;
-      letter-spacing: 3px; text-transform: uppercase;
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+      color: #FF5C00; letter-spacing: 3px;
     }
     .hero-banner h1 {
       font-family: 'Instrument Serif', serif; font-size: 56px; font-weight: 600;
@@ -144,6 +133,10 @@
       display: flex; align-items: center; justify-content: space-between;
       background: #F2F2F4; padding: 40px 60px;
     }
+    .footer-logo {
+      font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 600;
+      letter-spacing: 4px; color: #FF5C00;
+    }
     .footer-links { display: flex; gap: 32px; }
     .footer-links a { font-size: 12px; font-weight: 500; color: #9A9AA0; }
     .footer-links a:hover { color: #5A5A60; }
@@ -153,21 +146,13 @@
 <body>
 
 <header>
-  <div class="logo">Game Portal</div>
-  <nav>
-    <a href="#">新作</a>
-    <a href="#">アクション</a>
-    <a href="#">RPG</a>
-    <a href="#">パズル</a>
-    <a href="#">レーシング</a>
-  </nav>
-  <a href="#" class="btn-login">ログイン</a>
+  <div class="logo">Storm Philia Games</div>
 </header>
 
 <section class="hero-banner">
-  <div class="eyebrow">Discover Your Next Adventure</div>
-  <h1>新作・注目タイトル</h1>
-  <p>選りすぐりのゲームタイトルを一覧でチェック。あなたの次の冒険はここから始まる。</p>
+  <div class="eyebrow">RedGreen's games</div>
+  <h1>レッドグリーンのゲーム</h1>
+  <p>レッドグリーンが作ったゲームタイトルを一覧でチェック</p>
 </section>
 
 <section class="pickup">
@@ -201,54 +186,90 @@
     <a href="detail.html" class="game-card">
       <img class="card-image" src="./images/game/img03.png" alt="ツインビー風ゲーム">
       <div class="card-body">
-        <div class="card-badge orange">アクションRPG</div>
+        <div class="card-badge orange">シューティング</div>
         <div class="card-title">ツインビー風ゲーム</div>
         <div class="card-desc">謎の未確認生物から地球を救うシューティング</div>
         <div class="card-link">詳しく見る →</div>
       </div>
     </a>
     <div class="game-card">
-      <img class="card-image" src="https://picsum.photos/seed/stellar/400/220" alt="STELLAR DRIFT">
+      <img class="card-image" src="./images/game-list/記憶ゲーム.png" alt="記憶ゲーム">
       <div class="card-body">
-        <div class="card-badge blue">スペースアドベンチャー</div>
-        <div class="card-title">STELLAR DRIFT</div>
-        <div class="card-desc">広大な宇宙を旅する探索アドベンチャー</div>
+        <div class="card-badge green">脳トレ</div>
+        <div class="card-title">記憶ゲーム</div>
+        <div class="card-desc">矢印の向きを記憶する、老若男女問わず楽しめる脳トレゲーム</div>
         <div class="card-link">詳しく見る →</div>
       </div>
     </div>
     <div class="game-card">
-      <img class="card-image" src="https://picsum.photos/seed/echo/400/220" alt="ECHO VALLEY">
+      <img class="card-image" src="./images/game-list/Jamping Fight.png" alt="Jamping Fight">
       <div class="card-body">
-        <div class="card-badge green">パズルアドベンチャー</div>
-        <div class="card-title">ECHO VALLEY</div>
-        <div class="card-desc">謎に満ちた渓谷を探索するパズルゲーム</div>
+        <div class="card-badge orange">対戦アクション</div>
+        <div class="card-title">Jamping Fight</div>
+        <div class="card-desc">３つのボタンだけで楽しめる！シンプルでコンパクトな対戦アクション</div>
         <div class="card-link">詳しく見る →</div>
       </div>
     </div>
     <div class="game-card">
-      <img class="card-image" src="https://picsum.photos/seed/iron/400/220" alt="IRON CITADEL">
+      <img class="card-image" src="./images/game-list/選択系ゲーム.png" alt="選択系ゲーム">
       <div class="card-body">
-        <div class="card-badge yellow">ストラテジー</div>
-        <div class="card-title">IRON CITADEL</div>
-        <div class="card-desc">難攻不落の要塞を築く本格ストラテジー</div>
+        <div class="card-badge blue">対戦</div>
+        <div class="card-title">選択系ゲーム</div>
+        <div class="card-desc">運と頭脳が試される、コマンド対戦ゲーム</div>
         <div class="card-link">詳しく見る →</div>
       </div>
     </div>
     <div class="game-card">
-      <img class="card-image" src="https://picsum.photos/seed/phantom/400/220" alt="PHANTOM RUSH">
+      <img class="card-image" src="./images/game-list/Chill Time.png" alt="Chill Time">
       <div class="card-body">
-        <div class="card-badge pink">レーシング</div>
-        <div class="card-title">PHANTOM RUSH</div>
-        <div class="card-desc">超高速バイクで駆け抜けるレーシングゲーム</div>
+        <div class="card-badge cyan">チル</div>
+        <div class="card-title">Chill Time</div>
+        <div class="card-desc">時間を見ながらゆっくり遊びたい人におすすめのチルゲーム</div>
         <div class="card-link">詳しく見る →</div>
       </div>
     </div>
     <div class="game-card">
-      <img class="card-image" src="https://picsum.photos/seed/crystal/400/220" alt="CRYSTAL DEPTHS">
+      <img class="card-image" src="./images/game-list/果物取りゲーム.png" alt="果物取りゲーム">
       <div class="card-body">
-        <div class="card-badge cyan">探索</div>
-        <div class="card-title">CRYSTAL DEPTHS</div>
-        <div class="card-desc">深海に眠る神秘の結晶を探す探索ゲーム</div>
+        <div class="card-badge yellow">アクション</div>
+        <div class="card-title">果物取りゲーム</div>
+        <div class="card-desc">1回３０秒でおわる！シンプルかつ奥深い２Dアクションゲーム</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <a href="detail-osaka.html" class="game-card">
+      <img class="card-image" src="./images/game-list/これぞ！大阪.png" alt="これぞ！大阪">
+      <div class="card-body">
+        <div class="card-badge orange">アクション</div>
+        <div class="card-title">これぞ！大阪</div>
+        <div class="card-desc">OSAKA キッズプログラミングコンテスト2022 最優秀賞受賞！大阪の魅力が学べるアクション</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </a>
+    <div class="game-card">
+      <img class="card-image" src="./images/game-list/桜ソード３D.png" alt="桜ソード３D">
+      <div class="card-body">
+        <div class="card-badge pink">3Dアクション</div>
+        <div class="card-title">桜ソード３D</div>
+        <div class="card-desc">FunTechゲーム開発コンテスト3月 最優秀作品！春をモチーフにした3Dアクション</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img class="card-image" src="./images/game-list/障害物避けゲーム.png" alt="障害物避けゲーム">
+      <div class="card-body">
+        <div class="card-badge yellow">アクション</div>
+        <div class="card-title">障害物避けゲーム</div>
+        <div class="card-desc">迫りくる障害物をよけ続けろ！モバイル対応のアクションゲーム</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img class="card-image" src="./images/game-list/シュウテ.png" alt="シュウテ">
+      <div class="card-body">
+        <div class="card-badge blue">シューティング</div>
+        <div class="card-title">シュウテ</div>
+        <div class="card-desc">ボスのドラゴンを倒せ！モバイル対応シューティングアクションゲーム</div>
         <div class="card-link">詳しく見る →</div>
       </div>
     </div>
@@ -256,13 +277,11 @@
 </section>
 
 <footer>
-  <div class="logo">Game Portal</div>
+  <div class="footer-logo">Storm Philia Games</div>
   <div class="footer-links">
-    <a href="#">利用規約</a>
-    <a href="#">プライバシーポリシー</a>
-    <a href="#">お問い合わせ</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">ページトップへ</a>
   </div>
-  <div class="footer-copy">© 2025 GAME PORTAL. All rights reserved.</div>
+  <div class="footer-copy">© 2025 Storm Philia Games. All rights reserved.</div>
 </footer>
 
 <script>

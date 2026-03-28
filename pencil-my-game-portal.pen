@@ -1206,98 +1206,11 @@
               "id": "YDMPH",
               "name": "topLogo",
               "fill": "#FF5C00",
-              "content": "GAME PORTAL",
+              "content": "Storm Philia Games",
               "fontFamily": "DM Mono",
               "fontSize": 20,
               "fontWeight": "600",
               "letterSpacing": 4
-            },
-            {
-              "type": "frame",
-              "id": "0ekDY",
-              "name": "topNav",
-              "gap": 32,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "SU1zC",
-                  "name": "tn1",
-                  "fill": "#0A0A0B",
-                  "content": "新作",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "tQsnU",
-                  "name": "tn2",
-                  "fill": "#5A5A60",
-                  "content": "アクション",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "5nEck",
-                  "name": "tn3",
-                  "fill": "#5A5A60",
-                  "content": "RPG",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "f1G92",
-                  "name": "tn4",
-                  "fill": "#5A5A60",
-                  "content": "パズル",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "DnE8h",
-                  "name": "tn5",
-                  "fill": "#5A5A60",
-                  "content": "レーシング",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "YhDr0",
-              "name": "topHeaderBtn",
-              "fill": "#FF5C0018",
-              "cornerRadius": 100,
-              "stroke": {
-                "thickness": 1,
-                "fill": "#FF5C00"
-              },
-              "padding": [
-                10,
-                24
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "8FcFq",
-                  "name": "topHeaderBtnText",
-                  "fill": "#FF5C00",
-                  "content": "ログイン",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                }
-              ]
             }
           ]
         },
@@ -1339,7 +1252,7 @@
               "id": "QqJpG",
               "name": "heroTagline",
               "fill": "#FF5C00",
-              "content": "DISCOVER YOUR NEXT ADVENTURE",
+              "content": "RedGreen's games",
               "fontFamily": "Inter",
               "fontSize": 12,
               "fontWeight": "600",
@@ -1352,7 +1265,7 @@
               "fill": "#0A0A0B",
               "textGrowth": "fixed-width",
               "width": 700,
-              "content": "新作・注目タイトル",
+              "content": "レッドグリーンのゲーム",
               "fontFamily": "Instrument Serif",
               "fontSize": 56,
               "fontWeight": "600",
@@ -1365,7 +1278,7 @@
               "fill": "#5A5A60",
               "textGrowth": "fixed-width",
               "width": 600,
-              "content": "選りすぐりのゲームタイトルを一覧でチェック。あなたの次の冒険はここから始まる。",
+              "content": "レッドグリーンが作ったゲームタイトルを一覧でチェック",
               "lineHeight": 1.5,
               "fontFamily": "Inter",
               "fontSize": 16,
@@ -2407,7 +2320,7 @@
               "id": "vARZ3",
               "name": "topFooterLogo",
               "fill": "#FF5C00",
-              "content": "GAME PORTAL",
+              "content": "Storm Philia Games",
               "fontFamily": "DM Mono",
               "fontSize": 16,
               "fontWeight": "600",
@@ -2421,30 +2334,10 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "5GPmt",
-                  "name": "tfl1",
-                  "fill": "#9A9AA0",
-                  "content": "利用規約",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
                   "id": "RrMfc",
                   "name": "tfl2",
                   "fill": "#9A9AA0",
-                  "content": "プライバシーポリシー",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "xBFjk",
-                  "name": "tfl3",
-                  "fill": "#9A9AA0",
-                  "content": "お問い合わせ",
+                  "content": "ページトップへ",
                   "fontFamily": "Inter",
                   "fontSize": 12,
                   "fontWeight": "500"
@@ -2456,7 +2349,7 @@
               "id": "R2Gs8",
               "name": "topFooterCopy",
               "fill": "#AAAAB0",
-              "content": "© 2025 GAME PORTAL. All rights reserved.",
+              "content": "© 2025 Storm Philia Games. All rights reserved.",
               "fontFamily": "Inter",
               "fontSize": 12,
               "fontWeight": "normal"
@@ -2909,7 +2802,7 @@
               "fill": {
                 "type": "image",
                 "enabled": true,
-                "url": "./images/generated-1774685133756.png",
+                "url": "./images/game/osaka/これぞ！大阪-メイン.png",
                 "mode": "fill"
               },
               "cornerRadius": 16
@@ -3050,41 +2943,6 @@
                       "fontSize": 14,
                       "fontWeight": "600",
                       "letterSpacing": 2
-                    },
-                    {
-                      "type": "frame",
-                      "id": "d3jCW",
-                      "name": "platBadge",
-                      "fill": "#F2F2F4",
-                      "cornerRadius": 8,
-                      "gap": 8,
-                      "padding": [
-                        10,
-                        20
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "MHzKl",
-                          "name": "scratchIcon",
-                          "width": 16,
-                          "height": 16,
-                          "iconFontName": "code",
-                          "iconFontFamily": "lucide",
-                          "fill": "#FF5C00"
-                        },
-                        {
-                          "type": "text",
-                          "id": "WTfSY",
-                          "name": "platLabel",
-                          "fill": "#5A5A60",
-                          "content": "Scratch",
-                          "fontFamily": "DM Mono",
-                          "fontSize": 13,
-                          "fontWeight": "600"
-                        }
-                      ]
                     }
                   ]
                 }
@@ -3201,6 +3059,20 @@
                       "fontFamily": "Inter",
                       "fontSize": 14,
                       "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xcfML",
+                      "name": "card1Img",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/action.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
                     }
                   ]
                 },
@@ -3260,6 +3132,20 @@
                       "fontFamily": "Inter",
                       "fontSize": 14,
                       "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "q7AMG",
+                      "name": "card2Img",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/room.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
                     }
                   ]
                 },
@@ -3319,6 +3205,20 @@
                       "fontFamily": "Inter",
                       "fontSize": 14,
                       "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hTzEq",
+                      "name": "card3Img",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/library.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
                     }
                   ]
                 }
@@ -3376,52 +3276,280 @@
             },
             {
               "type": "frame",
-              "id": "54Ja4",
-              "name": "ssImages",
+              "id": "6FfEP",
+              "name": "viewerWrapper",
               "width": "fill_container",
-              "gap": 20,
+              "gap": 16,
+              "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "maG8H",
-                  "name": "ssImg1",
-                  "width": "fill_container",
-                  "height": 320,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1774685197112.png",
-                    "mode": "fill"
+                  "id": "SOQ1B",
+                  "name": "leftBtn",
+                  "width": 48,
+                  "height": 48,
+                  "fill": "#F2F2F4",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D0D0D5"
                   },
-                  "cornerRadius": 12
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "1qcFG",
+                      "name": "leftIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "chevron-left",
+                      "iconFontFamily": "lucide",
+                      "fill": "#9A9AA0"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
-                  "id": "A0BXJ",
-                  "name": "ssImg2",
+                  "id": "XTjCL",
+                  "name": "mainContent",
                   "width": "fill_container",
-                  "height": 320,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1774685212307.png",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 12
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UsjI5",
+                      "name": "mainImg",
+                      "width": "fill_container",
+                      "height": 540,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/スクリーンショット 2026-03-28 184323.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XgIXg",
+                      "name": "thumbStrip",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IiIui",
+                          "name": "th1",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184323.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6,
+                          "stroke": {
+                            "thickness": 3,
+                            "fill": "#FF5C00"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "az4HJ",
+                          "name": "th2",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184341.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "X4V8f",
+                          "name": "th3",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184355.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Bpngg",
+                          "name": "th4",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184408.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VFZES",
+                          "name": "th5",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184506.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "6ixAz",
+                          "name": "th6",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184519.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "W6htQ",
+                          "name": "th7",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184738.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uAusT",
+                          "name": "th8",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184808.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "GSL5c",
+                          "name": "th9",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184925.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "REyEc",
+                          "name": "th10",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 184942.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "myEkS",
+                          "name": "th11",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 185000.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fBUnM",
+                          "name": "th12",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 185114.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iBFJP",
+                          "name": "th13",
+                          "width": "fill_container",
+                          "height": 72,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/game/osaka/スクリーンショット 2026-03-28 185310.png",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 6
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
-                  "id": "Hz6n3",
-                  "name": "ssImg3",
-                  "width": "fill_container",
-                  "height": 320,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1774685237502.png",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 12
+                  "id": "ZEeFW",
+                  "name": "rightBtn",
+                  "width": 48,
+                  "height": 48,
+                  "fill": "#FF5C00",
+                  "cornerRadius": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "3Dkyp",
+                      "name": "rightIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
                 }
               ]
             }
