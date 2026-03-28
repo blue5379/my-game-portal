@@ -3016,36 +3016,32 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "ru9cz",
-                      "name": "card1IconBg",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "#FF5C0018",
-                      "cornerRadius": 12,
-                      "justifyContent": "center",
+                      "id": "g3Au7",
+                      "name": "card1TitleRow",
+                      "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "icon_font",
-                          "id": "SHlNL",
-                          "name": "card1IconInner",
-                          "width": 24,
-                          "height": 24,
+                          "id": "dg4mp",
+                          "name": "card1TitleIcon",
+                          "width": 20,
+                          "height": 20,
                           "iconFontName": "gamepad-2",
                           "iconFontFamily": "lucide",
                           "fill": "#FF5C00"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3suiQ",
+                          "name": "card1TitleText",
+                          "fill": "#0A0A0B",
+                          "content": "アクションゲーム",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
                         }
                       ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "VK04R",
-                      "name": "card1Title",
-                      "fill": "#0A0A0B",
-                      "content": "アクションゲーム",
-                      "fontFamily": "Inter",
-                      "fontSize": 18,
-                      "fontWeight": "700"
                     },
                     {
                       "type": "text",
@@ -3070,7 +3066,7 @@
                         "type": "image",
                         "enabled": true,
                         "url": "./images/game/osaka/action.png",
-                        "mode": "fill"
+                        "mode": "fit"
                       },
                       "cornerRadius": 8
                     }
@@ -3089,36 +3085,32 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "Gyoro",
-                      "name": "card2IconBg",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "#FF5C0018",
-                      "cornerRadius": 12,
-                      "justifyContent": "center",
+                      "id": "j4wyj",
+                      "name": "card2TitleRow",
+                      "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "icon_font",
-                          "id": "JVe2l",
-                          "name": "card2IconInner",
-                          "width": 24,
-                          "height": 24,
+                          "id": "9G5yk",
+                          "name": "card2TitleIcon",
+                          "width": 20,
+                          "height": 20,
                           "iconFontName": "house",
                           "iconFontFamily": "lucide",
                           "fill": "#FF5C00"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bWmRc",
+                          "name": "card2TitleText",
+                          "fill": "#0A0A0B",
+                          "content": "アイテム部屋",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
                         }
                       ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "DAZaP",
-                      "name": "card2Title",
-                      "fill": "#0A0A0B",
-                      "content": "アイテム部屋",
-                      "fontFamily": "Inter",
-                      "fontSize": 18,
-                      "fontWeight": "700"
                     },
                     {
                       "type": "text",
@@ -3143,7 +3135,7 @@
                         "type": "image",
                         "enabled": true,
                         "url": "./images/game/osaka/room.png",
-                        "mode": "fill"
+                        "mode": "fit"
                       },
                       "cornerRadius": 8
                     }
@@ -3162,36 +3154,32 @@
                   "children": [
                     {
                       "type": "frame",
-                      "id": "dY2i1",
-                      "name": "card3IconBg",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "#FF5C0018",
-                      "cornerRadius": 12,
-                      "justifyContent": "center",
+                      "id": "FhuXB",
+                      "name": "card3TitleRow",
+                      "gap": 8,
                       "alignItems": "center",
                       "children": [
                         {
                           "type": "icon_font",
-                          "id": "KntBs",
-                          "name": "card3IconInner",
-                          "width": 24,
-                          "height": 24,
+                          "id": "M451o",
+                          "name": "card3TitleIcon",
+                          "width": 20,
+                          "height": 20,
                           "iconFontName": "book-open",
                           "iconFontFamily": "lucide",
                           "fill": "#FF5C00"
+                        },
+                        {
+                          "type": "text",
+                          "id": "j5YDw",
+                          "name": "card3TitleText",
+                          "fill": "#0A0A0B",
+                          "content": "大阪コイン図書館",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
                         }
                       ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "OqX76",
-                      "name": "card3Title",
-                      "fill": "#0A0A0B",
-                      "content": "大阪コイン図書館",
-                      "fontFamily": "Inter",
-                      "fontSize": 18,
-                      "fontWeight": "700"
                     },
                     {
                       "type": "text",
@@ -3216,7 +3204,7 @@
                         "type": "image",
                         "enabled": true,
                         "url": "./images/game/osaka/library.png",
-                        "mode": "fill"
+                        "mode": "fit"
                       },
                       "cornerRadius": 8
                     }
