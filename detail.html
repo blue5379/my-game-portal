@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ツインビー風ゲーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #0A0A0B; min-width: 1200px; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; padding: 0 60px; background: #F2F2F4;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo {
+      font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 600;
+      letter-spacing: 4px; color: #FF5C00;
+    }
+    nav { display: flex; gap: 32px; }
+    nav a { font-size: 14px; font-weight: 500; color: #5A5A60; transition: color .2s; }
+    nav a:first-child { color: #0A0A0B; }
+    nav a:hover { color: #0A0A0B; }
+    .btn-play {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 24px; background: #FF5C00; color: #0A0A0B;
+      border-radius: 100px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: none; transition: background .2s;
+    }
+    .btn-play:hover { background: #e05000; }
+
+    /* Hero */
+    .hero {
+      display: flex; align-items: center; gap: 80px;
+      padding: 0 120px; height: 700px; background: #fff;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; gap: 28px;
+      flex: 1; min-width: 0;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,92,0,.094); padding: 6px 14px; border-radius: 100px;
+      font-size: 12px; font-weight: 500; color: #FF8A4C; width: fit-content;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: #FF5C00; border-radius: 50%; }
+    .hero-title {
+      font-family: 'Instrument Serif', serif; font-size: 60px; font-weight: 600;
+      line-height: 1.1; letter-spacing: -2px;
+    }
+    .hero-sub { font-size: 18px; color: #5A5A60; line-height: 1.6; }
+    .cta-row { display: flex; align-items: center; gap: 16px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 32px; background: #FF5C00; color: #0A0A0B;
+      border-radius: 8px; font-size: 16px; font-weight: 600;
+      border: none; cursor: pointer; transition: background .2s;
+    }
+    .btn-primary:hover { background: #e05000; }
+    .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 32px; background: #F2F2F4; color: #5A5A60;
+      border-radius: 8px; font-size: 16px; font-weight: 500;
+      border: 1px solid #D0D0D5; cursor: pointer; transition: all .2s;
+    }
+    .btn-secondary:hover { border-color: #0A0A0B; color: #0A0A0B; }
+    .hero-image {
+      width: 560px; flex-shrink: 0;
+      border-radius: 16px; overflow: hidden;
+    }
+    .hero-image img { width: 100%; height: auto; display: block; }
+
+    /* Features */
+    .features {
+      background: #F2F2F4; padding: 80px 120px;
+      display: flex; flex-direction: column; gap: 48px;
+    }
+    .features-header {
+      display: flex; flex-direction: column; gap: 12px; align-items: center;
+    }
+    .eyebrow {
+      font-size: 12px; font-weight: 600; color: #FF5C00;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .features-title {
+      font-family: 'Instrument Serif', serif; font-size: 40px; font-weight: 600;
+      letter-spacing: -1px; text-align: center;
+    }
+    .features-sub { font-size: 16px; color: #5A5A60; line-height: 1.5; text-align: center; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .feature-card {
+      background: #F8F8FA; border-radius: 12px; padding: 32px;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .feature-icon {
+      width: 48px; height: 48px; border-radius: 10px;
+      background: rgba(255,92,0,.094); display: flex;
+      align-items: center; justify-content: center; font-size: 22px;
+    }
+    .feature-title { font-size: 20px; font-weight: 600; color: #0A0A0B; }
+    .feature-desc { font-size: 14px; color: #5A5A60; line-height: 1.6; }
+
+    /* Screenshots */
+    .screenshots {
+      background: #fff; padding: 80px 120px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .section-title {
+      font-family: 'Instrument Serif', serif; font-size: 50px;
+      font-weight: 600; letter-spacing: -1px;
+    }
+    .viewer-wrapper { display: flex; align-items: center; gap: 16px; }
+    .viewer-btn {
+      width: 48px; height: 48px; border-radius: 24px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; cursor: pointer; border: none; transition: opacity .2s;
+    }
+    .viewer-btn.secondary { background: #F2F2F4; color: #0A0A0B; border: 1px solid #D0D0D5; }
+    .viewer-btn.primary   { background: #FF5C00; color: #fff; }
+    .viewer-btn:hover { opacity: .8; }
+    .main-content { display: flex; flex-direction: column; gap: 12px; flex: 1; min-width: 0; }
+    .main-image {
+      width: 100%; height: 480px; border-radius: 12px;
+      overflow: hidden; background: #E8E8EC;
+    }
+    .main-image img {
+      width: 100%; height: 100%; object-fit: contain;
+      transition: opacity .25s;
+    }
+    .thumb-strip {
+      display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .thumb-strip::-webkit-scrollbar { display: none; }
+    .thumb {
+      width: 80px; height: 60px; border-radius: 6px; overflow: hidden;
+      flex-shrink: 0; cursor: pointer;
+      border: 2px solid transparent; transition: border-color .2s, opacity .2s;
+      background: #E8E8EC;
+    }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb.active { border-color: #FF5C00; }
+    .thumb:not(.active) { opacity: .6; }
+    .thumb:not(.active):hover { opacity: 1; }
+    .section-desc { font-size: 40px; color: #5A5A60; line-height: 1.6; }
+
+    /* Kiki Section */
+    .kiki-section {
+      background: #F2F2F4; padding: 60px 120px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .kiki-slider-wrapper { display: flex; align-items: center; gap: 12px; }
+    .kiki-cards { display: flex; gap: 16px; flex: 1; overflow: hidden; }
+    .kiki-card { flex: 1; border-radius: 12px; overflow: hidden; min-width: 0; }
+    .kiki-card img {
+      width: 100%; height: 240px; object-fit: contain;
+      display: block; background: #D8D8DC;
+    }
+
+    /* Zukan Section */
+    .zukan-section {
+      background: #fff; padding: 60px 120px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .zukan-flow { display: flex; align-items: center; gap: 24px; }
+    .zukan-img {
+      flex: 1; border-radius: 12px; overflow: hidden;
+    }
+    .zukan-img img { width: 100%; height: auto; display: block; }
+    .zukan-arrow {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; flex-shrink: 0;
+    }
+    .arrow-label { font-size: 30px; font-weight: 500; color: #5A5A60; white-space: nowrap; }
+    .arrow-icon { font-size: 36px; color: #FF5C00; }
+
+    /* Final CTA */
+    .final-cta {
+      background: #fff; padding: 100px 120px;
+      display: flex; flex-direction: column; align-items: center; gap: 32px;
+    }
+    .cta-deco { width: 80px; height: 4px; background: #FF5C00; border-radius: 2px; }
+    .cta-title {
+      font-family: 'Instrument Serif', serif; font-size: 56px; font-weight: 600;
+      letter-spacing: -1px; text-align: center;
+    }
+    .cta-sub { font-size: 18px; color: #5A5A60; text-align: center; line-height: 1.5; }
+    .btn-cta {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 16px 40px; background: #FF5C00; color: #0A0A0B;
+      border-radius: 8px; font-size: 16px; font-weight: 600;
+      border: none; cursor: pointer; transition: background .2s;
+    }
+    .btn-cta:hover { background: #e05000; }
+
+    /* Footer */
+    footer {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #F2F2F4; padding: 40px 60px;
+    }
+    .footer-logo {
+      font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 600;
+      letter-spacing: 4px; color: #FF5C00;
+    }
+    .footer-links { display: flex; gap: 32px; }
+    .footer-links a { font-size: 12px; font-weight: 500; color: #9A9AA0; }
+    .footer-links a:hover { color: #5A5A60; }
+    .footer-copy { font-size: 12px; color: #AAAAB0; }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">ツインビー風ゲーム</div>
+  <div style="display:flex; align-items:center; gap:24px; margin-left:auto;">
+    <span style="font-size:20px; font-weight:500; color:#0A0A0B;">ドット絵の懐かしい世界を楽しもう</span>
+    <a href="https://scratch.mit.edu/projects/1191411435/" target="_blank" class="btn-play">今すぐプレイ</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-badge">2025年 新作シューティング</span>
+    <h1 class="hero-title">ツインビー風ゲーム</h1>
+    <p class="hero-sub">謎の未確認生物が地球に迫る！戦闘機に乗り込んで、ポップでスピーディなシューティングアクションを楽しもう。</p>
+    <div class="cta-row">
+      <a href="https://scratch.mit.edu/projects/1191411435/" target="_blank" class="btn-primary">今すぐプレイ</a>
+      <button class="btn-secondary">トレーラーを見る</button>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="./images/game/img01.png" alt="ツインビー風ゲーム">
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <div class="features-header">
+    <div class="eyebrow">Game Features</div>
+    <h2 class="features-title">ゲームの特徴</h2>
+    <p class="features-sub">３つの楽しめる要素</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <div class="feature-title">シューティング</div>
+      <p class="feature-desc">爽快感のある分かりやすいシューティングアクションで世界に没入しよう！</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚙️</div>
+      <div class="feature-title">ドットで彩られる世界</div>
+      <p class="feature-desc">懐かしさや温かさを感じるドットによるイラストを楽しもう！</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📖</div>
+      <div class="feature-title">充実したやりこみ要素</div>
+      <p class="feature-desc">未知の生物を撃破し続け、解析することで全ての生態を明らかにしよう</p>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="screenshots">
+  <h2 class="section-title">あなたが世界を救う</h2>
+  <div class="viewer-wrapper">
+    <button class="viewer-btn secondary" id="prevBtn">‹</button>
+    <div class="main-content">
+      <div class="main-image">
+        <img id="mainImg" src="./images/game/img01.png" alt="screenshot">
+      </div>
+      <div class="thumb-strip" id="thumbStrip"></div>
+    </div>
+    <button class="viewer-btn primary" id="nextBtn">›</button>
+  </div>
+  <p class="section-desc">次々に襲いかかる謎の生物をビームやアイテムを駆使して撃退しよう。さらに２人で出撃することもできる</p>
+</section>
+
+<!-- Kiki Section -->
+<section class="kiki-section">
+  <h2 class="section-title">自分だけの戦闘機を作ろう</h2>
+  <div class="kiki-slider-wrapper">
+    <button class="viewer-btn secondary" id="kikiPrev">‹</button>
+    <div class="kiki-cards" id="kikiCards"></div>
+    <button class="viewer-btn primary" id="kikiNext">›</button>
+  </div>
+  <p class="section-desc">機体の色だけでなく、全体の音量や演出の音なども調整できる。</p>
+</section>
+
+<!-- Zukan Section -->
+<section class="zukan-section">
+  <h2 class="section-title">未知の生物を記録しよう</h2>
+  <div class="zukan-flow">
+    <div class="zukan-img">
+      <img src="./images/game/img17.png" alt="未知の生物">
+    </div>
+    <div class="zukan-arrow">
+      <div class="arrow-label">達成すると</div>
+      <div class="arrow-icon">→</div>
+    </div>
+    <div class="zukan-img">
+      <img src="./images/game/img18.png" alt="図鑑登録">
+    </div>
+  </div>
+  <p class="section-desc">謎の生物を倒すほど解析が進み、図鑑に登録することができる。</p>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="cta-deco"></div>
+  <h2 class="cta-title">今すぐプレイしよう</h2>
+  <p class="cta-sub">ブラウザで今すぐ遊べる！無料で始められます。</p>
+  <a href="https://scratch.mit.edu/projects/1191411435/" target="_blank" class="btn-cta">今すぐプレイ</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">ツインビー風ゲーム</div>
+  <div class="footer-links">
+    <a href="#" style="font-size:18px;" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">ページのトップへ</a>
+  </div>
+</footer>
+
+<script>
+  // Screenshots slider
+  const screenshotImages = [
+    './images/game/img01.png',
+    './images/game/img07.png',
+    './images/game/img08.png',
+    './images/game/img09.png',
+    './images/game/img10.png',
+    './images/game/img11.png',
+    './images/game/img12.png',
+    './images/game/img13.png',
+    './images/game/img14.png',
+    './images/game/img15.png',
+    './images/game/img16.png',
+  ];
+
+  let currentIndex = 0;
+  const mainImg = document.getElementById('mainImg');
+  const thumbStrip = document.getElementById('thumbStrip');
+
+  screenshotImages.forEach((src, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'thumb' + (i === 0 ? ' active' : '');
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'thumb ' + (i + 1);
+    thumb.appendChild(img);
+    thumb.addEventListener('click', () => setImage(i));
+    thumbStrip.appendChild(thumb);
+  });
+
+  function setImage(index) {
+    currentIndex = (index + screenshotImages.length) % screenshotImages.length;
+    mainImg.style.opacity = '0';
+    setTimeout(() => {
+      mainImg.src = screenshotImages[currentIndex];
+      mainImg.style.opacity = '1';
+    }, 150);
+    document.querySelectorAll('.thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === currentIndex);
+    });
+    const thumb = thumbStrip.children[currentIndex];
+    if (thumb) {
+      const stripLeft = thumbStrip.scrollLeft;
+      const stripRight = stripLeft + thumbStrip.clientWidth;
+      const thumbLeft = thumb.offsetLeft;
+      const thumbRight = thumbLeft + thumb.offsetWidth;
+      if (thumbLeft < stripLeft) {
+        thumbStrip.scrollLeft = thumbLeft - 10;
+      } else if (thumbRight > stripRight) {
+        thumbStrip.scrollLeft = thumbRight - thumbStrip.clientWidth + 10;
+      }
+    }
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => setImage(currentIndex - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => setImage(currentIndex + 1));
+
+  // Kiki slider
+  const kikiImages = [
+    './images/game/img02.png',
+    './images/game/img03.png',
+    './images/game/img04.png',
+    './images/game/img05.png',
+    './images/game/img06.png',
+  ];
+
+  let kikiPage = 0;
+  const perPage = 3;
+  const kikiCards = document.getElementById('kikiCards');
+  const totalPages = Math.ceil(kikiImages.length / perPage);
+
+  function renderKiki() {
+    kikiCards.innerHTML = '';
+    const start = kikiPage * perPage;
+    kikiImages.slice(start, start + perPage).forEach(src => {
+      const card = document.createElement('div');
+      card.className = 'kiki-card';
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '機体調整';
+      card.appendChild(img);
+      kikiCards.appendChild(card);
+    });
+  }
+
+  document.getElementById('kikiPrev').addEventListener('click', () => {
+    kikiPage = (kikiPage - 1 + totalPages) % totalPages;
+    renderKiki();
+  });
+  document.getElementById('kikiNext').addEventListener('click', () => {
+    kikiPage = (kikiPage + 1) % totalPages;
+    renderKiki();
+  });
+
+  renderKiki();
+</script>
+</body>
+</html>

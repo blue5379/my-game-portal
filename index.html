@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAME PORTAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #0A0A0B; min-width: 1200px; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; padding: 0 60px; background: #F2F2F4;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo {
+      font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 600;
+      letter-spacing: 4px; color: #FF5C00; text-transform: uppercase;
+    }
+    nav { display: flex; gap: 32px; align-items: center; }
+    nav a { font-size: 14px; font-weight: 500; color: #5A5A60; transition: color .2s; }
+    nav a:first-child { color: #0A0A0B; }
+    nav a:hover { color: #0A0A0B; }
+    .btn-login {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 24px; background: rgba(255,92,0,.094); color: #FF5C00;
+      border-radius: 100px; font-size: 13px; font-weight: 600; cursor: pointer;
+      border: 1px solid #FF5C00; transition: background .2s;
+    }
+    .btn-login:hover { background: rgba(255,92,0,.15); }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(180deg, #FFF0E8 0%, #FFFFFF 100%);
+      padding: 60px 120px; display: flex; flex-direction: column; gap: 16px;
+      height: 320px; justify-content: center;
+    }
+    .eyebrow {
+      font-size: 12px; font-weight: 600; color: #FF5C00;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .hero-banner h1 {
+      font-family: 'Instrument Serif', serif; font-size: 56px; font-weight: 600;
+      line-height: 1.1; letter-spacing: -1px; max-width: 700px;
+    }
+    .hero-banner p { font-size: 16px; color: #5A5A60; line-height: 1.5; max-width: 600px; }
+
+    /* Pickup */
+    .pickup {
+      background: #F2F2F4; padding: 60px 120px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .section-header { display: flex; justify-content: space-between; align-items: center; }
+    .section-title {
+      font-family: 'Instrument Serif', serif; font-size: 28px;
+      font-weight: 600; letter-spacing: -1px;
+    }
+    .see-all { font-size: 14px; font-weight: 500; color: #FF5C00; }
+    .see-all:hover { opacity: .8; }
+
+    .pickup-card {
+      display: flex; background: #F8F8FA; border-radius: 16px;
+      overflow: hidden; height: 400px; cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .pickup-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,.12); }
+    .pickup-image { width: 600px; flex-shrink: 0; object-fit: cover; display: block; }
+    .pickup-info {
+      padding: 48px; display: flex; flex-direction: column;
+      gap: 20px; justify-content: center; flex: 1;
+    }
+    .pickup-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,92,0,.094); padding: 4px 12px; border-radius: 100px;
+      font-size: 12px; font-weight: 500; color: #FF8A4C; width: fit-content;
+    }
+    .pickup-badge::before { content: ''; width: 6px; height: 6px; background: #FF5C00; border-radius: 50%; }
+    .pickup-info h2 {
+      font-family: 'Instrument Serif', serif; font-size: 48px;
+      font-weight: 600; letter-spacing: -1px; line-height: 1.1;
+    }
+    .pickup-genre { font-size: 14px; color: #9A9AA0; }
+    .pickup-desc { font-size: 15px; color: #5A5A60; line-height: 1.6; }
+    .btn-pickup {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; background: #FF5C00; color: #0A0A0B;
+      border-radius: 8px; font-size: 14px; font-weight: 600;
+      border: none; cursor: pointer; width: fit-content;
+      transition: background .2s;
+    }
+    .btn-pickup:hover { background: #e05000; }
+
+    /* Games Grid */
+    .games-grid {
+      background: #fff; padding: 60px 120px;
+      display: flex; flex-direction: column; gap: 40px;
+    }
+    .filter-row { display: flex; gap: 8px; }
+    .filter-btn {
+      padding: 8px 16px; border-radius: 100px; font-size: 12px;
+      font-weight: 600; cursor: pointer; border: 1px solid transparent;
+      background: #F8F8FA; color: #5A5A60; transition: all .2s;
+    }
+    .filter-btn.active { background: #FF5C00; color: #0A0A0B; }
+    .filter-btn:not(.active):hover { border-color: #D0D0D5; color: #0A0A0B; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    .game-card {
+      background: #F2F2F4; border-radius: 12px; overflow: hidden;
+      display: block; cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .game-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.1); }
+
+    .card-image { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .card-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+    .card-badge {
+      display: inline-flex; align-items: center;
+      padding: 3px 10px; border-radius: 100px;
+      font-size: 11px; font-weight: 600; width: fit-content;
+    }
+    .card-badge.orange { background: rgba(255,92,0,.094); color: #FF8A4C; }
+    .card-badge.blue   { background: rgba(0,24,255,.094);  color: #8A9EFF; }
+    .card-badge.green  { background: rgba(0,255,128,.094); color: #5AFF9E; }
+    .card-badge.yellow { background: rgba(255,170,0,.094); color: #FFCC5A; }
+    .card-badge.pink   { background: rgba(255,0,128,.094); color: #FF6A9E; }
+    .card-badge.cyan   { background: rgba(0,204,255,.094); color: #5ACCFF; }
+
+    .card-title { font-size: 18px; font-weight: 600; color: #0A0A0B; }
+    .card-desc { font-size: 13px; color: #9A9AA0; }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 13px; font-weight: 600; color: #FF5C00;
+      padding: 10px 0;
+    }
+
+    /* Footer */
+    footer {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #F2F2F4; padding: 40px 60px;
+    }
+    .footer-links { display: flex; gap: 32px; }
+    .footer-links a { font-size: 12px; font-weight: 500; color: #9A9AA0; }
+    .footer-links a:hover { color: #5A5A60; }
+    .footer-copy { font-size: 12px; color: #AAAAB0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Game Portal</div>
+  <nav>
+    <a href="#">新作</a>
+    <a href="#">アクション</a>
+    <a href="#">RPG</a>
+    <a href="#">パズル</a>
+    <a href="#">レーシング</a>
+  </nav>
+  <a href="#" class="btn-login">ログイン</a>
+</header>
+
+<section class="hero-banner">
+  <div class="eyebrow">Discover Your Next Adventure</div>
+  <h1>新作・注目タイトル</h1>
+  <p>選りすぐりのゲームタイトルを一覧でチェック。あなたの次の冒険はここから始まる。</p>
+</section>
+
+<section class="pickup">
+  <div class="section-header">
+    <h2 class="section-title">ピックアップ</h2>
+    <a href="#" class="see-all">すべて見る →</a>
+  </div>
+  <a href="detail.html" class="pickup-card">
+    <img class="pickup-image" src="./images/game/img01.png" alt="ツインビー風ゲーム">
+    <div class="pickup-info">
+      <span class="pickup-badge">注目タイトル</span>
+      <h2>ツインビー風ゲーム</h2>
+      <div class="pickup-genre">シューティング &nbsp;·&nbsp; PC / スマートフォン</div>
+      <p class="pickup-desc">謎の未確認生物が地球に迫る！かわいい戦闘機でポップでスピーディなシューティングアクションを楽しもう。</p>
+      <button class="btn-pickup">詳しく見る →</button>
+    </div>
+  </a>
+</section>
+
+<section class="games-grid">
+  <div class="section-header">
+    <h2 class="section-title">すべてのゲーム</h2>
+    <div class="filter-row">
+      <button class="filter-btn active">すべて</button>
+      <button class="filter-btn">アクション</button>
+      <button class="filter-btn">RPG</button>
+      <button class="filter-btn">パズル</button>
+    </div>
+  </div>
+  <div class="grid">
+    <a href="detail.html" class="game-card">
+      <img class="card-image" src="./images/game/img03.png" alt="ツインビー風ゲーム">
+      <div class="card-body">
+        <div class="card-badge orange">アクションRPG</div>
+        <div class="card-title">ツインビー風ゲーム</div>
+        <div class="card-desc">謎の未確認生物から地球を救うシューティング</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </a>
+    <div class="game-card">
+      <img class="card-image" src="https://picsum.photos/seed/stellar/400/220" alt="STELLAR DRIFT">
+      <div class="card-body">
+        <div class="card-badge blue">スペースアドベンチャー</div>
+        <div class="card-title">STELLAR DRIFT</div>
+        <div class="card-desc">広大な宇宙を旅する探索アドベンチャー</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img class="card-image" src="https://picsum.photos/seed/echo/400/220" alt="ECHO VALLEY">
+      <div class="card-body">
+        <div class="card-badge green">パズルアドベンチャー</div>
+        <div class="card-title">ECHO VALLEY</div>
+        <div class="card-desc">謎に満ちた渓谷を探索するパズルゲーム</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img class="card-image" src="https://picsum.photos/seed/iron/400/220" alt="IRON CITADEL">
+      <div class="card-body">
+        <div class="card-badge yellow">ストラテジー</div>
+        <div class="card-title">IRON CITADEL</div>
+        <div class="card-desc">難攻不落の要塞を築く本格ストラテジー</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img class="card-image" src="https://picsum.photos/seed/phantom/400/220" alt="PHANTOM RUSH">
+      <div class="card-body">
+        <div class="card-badge pink">レーシング</div>
+        <div class="card-title">PHANTOM RUSH</div>
+        <div class="card-desc">超高速バイクで駆け抜けるレーシングゲーム</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img class="card-image" src="https://picsum.photos/seed/crystal/400/220" alt="CRYSTAL DEPTHS">
+      <div class="card-body">
+        <div class="card-badge cyan">探索</div>
+        <div class="card-title">CRYSTAL DEPTHS</div>
+        <div class="card-desc">深海に眠る神秘の結晶を探す探索ゲーム</div>
+        <div class="card-link">詳しく見る →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Game Portal</div>
+  <div class="footer-links">
+    <a href="#">利用規約</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
+  </div>
+  <div class="footer-copy">© 2025 GAME PORTAL. All rights reserved.</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
