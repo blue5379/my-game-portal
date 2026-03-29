@@ -253,6 +253,21 @@
     .footer-links a { font-size: 14px; color: #5A5A60; transition: color .2s; }
     .footer-links a:hover { color: #0A0A0B; }
 
+    /* Zukan Section */
+    .zukan-section {
+      background: #fff; padding: 60px 120px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .zukan-flow { display: flex; align-items: center; gap: 24px; }
+    .zukan-img { flex: 1; border-radius: 12px; overflow: hidden; }
+    .zukan-img img { width: 100%; height: auto; display: block; }
+    .zukan-arrow {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; flex-shrink: 0;
+    }
+    .arrow-label { font-size: 30px; font-weight: 500; color: #5A5A60; white-space: nowrap; }
+    .arrow-icon { color: #FF5C00; }
+
     /* Kiki Section */
     .kiki-section {
       background: #F2F2F4; padding: 60px 120px;
@@ -380,13 +395,36 @@
 
 <!-- Kiki Section -->
 <section class="kiki-section">
-  <h2 class="section-title">自分だけの部屋を作ろう</h2>
+  <h2 class="section-title">ミャクミャクによるサポート！</h2>
   <div class="kiki-slider-wrapper">
     <button class="viewer-btn secondary" id="kikiPrev">‹</button>
     <div class="kiki-cards" id="kikiCards"></div>
     <button class="viewer-btn primary" id="kikiNext">›</button>
   </div>
-  <p class="section-desc">ゲームでゲットしたアイテムを部屋に飾って、自分だけの部屋を作れる。</p>
+  <p class="section-desc">ミャクミャクがゲームの機能について分かりやすく教えてくれます。</p>
+</section>
+
+<!-- Zukan Section -->
+<section class="zukan-section">
+  <h2 class="section-title">大阪の意外な歴史について知ろう！</h2>
+  <div class="zukan-flow">
+    <div class="zukan-img"><img src="./images/game/osaka/o2.png" alt="大阪コイン"></div>
+    <div class="zukan-arrow">
+      <span class="arrow-label">アンロックすると</span>
+      <i data-lucide="arrow-right" class="arrow-icon" style="width:40px;height:40px;"></i>
+    </div>
+    <div class="zukan-img"><img src="./images/game/osaka/library.png" alt="大阪について知る"></div>
+  </div>
+  <p class="section-desc">ゲームでゲットした『大阪コイン』を使って面白い大阪にまつわる話を知る事ができる。</p>
+</section>
+
+<!-- Kiki Copy Section -->
+<section class="kiki-section">
+  <h2 class="section-title">自分だけの部屋をつくろう！</h2>
+  <div class="kiki-slider-wrapper">
+    <div class="kiki-cards" id="kikiCopyCards"></div>
+  </div>
+  <p class="section-desc">ゲームでゲットしたアイテムを自分の置きたい場所に置いて、"自分の"部屋をつくろう！</p>
 </section>
 
 <!-- CTA Section -->
@@ -469,9 +507,9 @@
   // Kiki slider
   const kikiImages = [
     './images/game/osaka/o20.png',
-    './images/game/osaka/o21.png',
     './images/game/osaka/o4.png',
     './images/game/osaka/o6.png',
+    './images/game/osaka/o21.png',
     './images/game/osaka/o8.png',
     './images/game/osaka/o11.png',
   ];
@@ -505,6 +543,35 @@
   });
 
   renderKiki();
+
+  // Kiki Copy slider
+  const kikiCopyImages = [
+    './images/game/osaka/o1.png',
+    './images/game/osaka/room.png',
+    './images/game/osaka/o12.png',
+    './images/game/osaka/o13.png',
+  ];
+
+  let kikiCopyPage = 0;
+  const perPageCopy = 4;
+  const kikiCopyCards = document.getElementById('kikiCopyCards');
+  const totalPagesCopy = Math.ceil(kikiCopyImages.length / perPageCopy);
+
+  function renderKikiCopy() {
+    kikiCopyCards.innerHTML = '';
+    const start = kikiCopyPage * perPageCopy;
+    kikiCopyImages.slice(start, start + perPageCopy).forEach(src => {
+      const card = document.createElement('div');
+      card.className = 'kiki-card';
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '部屋';
+      card.appendChild(img);
+      kikiCopyCards.appendChild(card);
+    });
+  }
+
+  renderKikiCopy();
 </script>
 </body>
 </html>

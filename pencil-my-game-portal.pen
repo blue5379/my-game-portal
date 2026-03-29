@@ -4032,7 +4032,7 @@
               "id": "aPIv8",
               "name": "kikiTitle",
               "fill": "#0A0A0B",
-              "content": "自分だけの部屋を作ろう",
+              "content": "ミャクミャクによるサポート！",
               "fontFamily": "Instrument Serif",
               "fontSize": 50,
               "fontWeight": "600",
@@ -4103,7 +4103,7 @@
                       "fill": {
                         "type": "image",
                         "enabled": true,
-                        "url": "./images/game/osaka/o21.png",
+                        "url": "./images/game/osaka/o4.png",
                         "mode": "fit"
                       },
                       "cornerRadius": 12
@@ -4117,7 +4117,7 @@
                       "fill": {
                         "type": "image",
                         "enabled": true,
-                        "url": "./images/game/osaka/o4.png",
+                        "url": "./images/game/osaka/o6.png",
                         "mode": "fit"
                       },
                       "cornerRadius": 12
@@ -4131,7 +4131,7 @@
                       "fill": {
                         "type": "image",
                         "enabled": true,
-                        "url": "./images/game/osaka/o6.png",
+                        "url": "./images/game/osaka/o21.png",
                         "mode": "fit"
                       },
                       "cornerRadius": 12
@@ -4198,7 +4198,228 @@
               "fill": "#5A5A60",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "ゲームでゲットしたアイテムを部屋に飾って、自分だけの部屋を作れる。",
+              "content": "ミャクミャクがゲームの機能について分かりやすく教えてくれます。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "457is",
+          "name": "zukanSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "YGrC6",
+              "name": "zukanTitle",
+              "fill": "#0A0A0B",
+              "content": "大阪の意外な歴史について知ろう！",
+              "fontFamily": "Instrument Serif",
+              "fontSize": 50,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "frame",
+              "id": "oKi9T",
+              "name": "imagesRow",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CQ8bB",
+                  "name": "img17frame",
+                  "width": "fill_container",
+                  "height": 320,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/game/osaka/o2.png",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "PMUUy",
+                  "name": "arrowArea",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mwkrD",
+                      "name": "arrowLabel",
+                      "fill": "#5A5A60",
+                      "content": "アンロックすると",
+                      "fontFamily": "Inter",
+                      "fontSize": 30,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "QmfHe",
+                      "name": "arrowIcon",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "arrow-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FF5C00"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Qauo0",
+                  "name": "img18frame",
+                  "width": "fill_container",
+                  "height": 320,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/game/osaka/library.png",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 12
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "WkmgM",
+              "name": "zukanDesc",
+              "fill": "#5A5A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "ゲームでゲットした『大阪コイン』を使って面白い大阪にまつわる話を知る事ができる。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xMbGF",
+          "name": "kikiCopy",
+          "width": "fill_container",
+          "fill": "#F2F2F4",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "V2q21",
+              "name": "kikiTitle",
+              "fill": "#0A0A0B",
+              "content": "自分だけの部屋をつくろう！",
+              "fontFamily": "Instrument Serif",
+              "fontSize": 50,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "frame",
+              "id": "VqQCr",
+              "name": "sliderRow",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cVP97",
+                  "name": "cards",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OfQnT",
+                      "name": "card1",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o1.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L8Lh1",
+                      "name": "card2",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/room.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hhitJ",
+                      "name": "card3",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o12.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZamgL",
+                      "name": "card4",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o13.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "BgPjR",
+              "name": "kikiDesc",
+              "fill": "#5A5A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "ゲームでゲットしたアイテムを自分の置きたい場所に置いて、\"自分の\"部屋をつくろう！",
               "lineHeight": 1.6,
               "fontFamily": "Inter",
               "fontSize": 40,
