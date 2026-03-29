@@ -114,19 +114,29 @@
       font-size: 11px; font-weight: 600; width: fit-content;
     }
     .card-badge.orange { background: rgba(255,92,0,.094); color: #FF8A4C; }
-    .card-badge.blue   { background: rgba(0,24,255,.094);  color: #8A9EFF; }
+    .card-badge.blue   { background: rgba(37,99,235,.1);   color: #2563EB; }
     .card-badge.green  { background: rgba(0,255,128,.094); color: #5AFF9E; }
-    .card-badge.yellow { background: rgba(255,170,0,.094); color: #FFCC5A; }
+    .card-badge.yellow { background: rgba(124,58,237,.1); color: #7C3AED; }
     .card-badge.pink   { background: rgba(255,0,128,.094); color: #FF6A9E; }
-    .card-badge.cyan   { background: rgba(0,204,255,.094); color: #5ACCFF; }
+    .card-badge.cyan   { background: rgba(8,145,178,.1);   color: #0891B2; }
 
     .card-title { font-size: 18px; font-weight: 600; color: #0A0A0B; }
     .card-desc { font-size: 13px; color: #9A9AA0; }
-    .card-link {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 13px; font-weight: 600; color: #FF5C00;
-      padding: 10px 0;
+    .card-actions { display: flex; align-items: center; gap: 12px; padding: 10px 0; }
+    .btn-detail-small {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 16px; background: transparent; color: #FF5C00;
+      border-radius: 6px; font-size: 13px; font-weight: 600;
+      border: 1.5px solid #FF5C00; transition: all .2s;
     }
+    .btn-detail-small:hover { background: rgba(255,92,0,.08); }
+    .btn-play-small {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 16px; background: #FF5C00; color: #fff;
+      border-radius: 6px; font-size: 13px; font-weight: 600;
+      transition: background .2s;
+    }
+    .btn-play-small:hover { background: #e05000; }
 
     /* Footer */
     footer {
@@ -184,22 +194,28 @@
     </div>
   </div>
   <div class="grid">
-    <a href="detail.html" class="game-card" data-tags="シューティング">
+    <div class="game-card" data-tags="シューティング">
       <img class="card-image" src="./images/game/img01.png" alt="ツインビー風ゲーム">
       <div class="card-body">
         <div class="card-badge orange">シューティング</div>
         <div class="card-title">ツインビー風ゲーム</div>
         <div class="card-desc">謎の未確認生物から地球を救うシューティング</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <a href="detail.html" class="btn-detail-small">詳しく見る</a>
+          <a href="https://scratch.mit.edu/projects/1191411435/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
-    </a>
+    </div>
     <div class="game-card" data-tags="脳トレ">
       <img class="card-image" src="./images/game-list/記憶ゲーム.png" alt="記憶ゲーム">
       <div class="card-body">
-        <div class="card-badge green">脳トレ</div>
+        <div class="card-badge pink">脳トレ</div>
         <div class="card-title">記憶ゲーム</div>
         <div class="card-desc">矢印の向きを記憶する、老若男女問わず楽しめる脳トレゲーム</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/1293856578/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
     <div class="game-card" data-tags="対戦 アクション">
@@ -211,7 +227,10 @@
         </div>
         <div class="card-title">Jamping Fight</div>
         <div class="card-desc">３つのボタンだけで楽しめる！シンプルでコンパクトな対戦アクション</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/1204925464/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
     <div class="game-card" data-tags="対戦">
@@ -220,7 +239,10 @@
         <div class="card-badge blue">対戦</div>
         <div class="card-title">選択系ゲーム</div>
         <div class="card-desc">運と頭脳が試される、コマンド対戦ゲーム</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/1160900045/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
     <div class="game-card" data-tags="チル">
@@ -229,7 +251,10 @@
         <div class="card-badge cyan">チル</div>
         <div class="card-title">Chill Time</div>
         <div class="card-desc">時間を見ながらゆっくり遊びたい人におすすめのチルゲーム</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/1188830395/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
     <div class="game-card" data-tags="アクション">
@@ -238,25 +263,34 @@
         <div class="card-badge yellow">アクション</div>
         <div class="card-title">果物取りゲーム</div>
         <div class="card-desc">1回３０秒でおわる！シンプルかつ奥深い２Dアクションゲーム</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/1176640785/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
-    <a href="detail-osaka.html" class="game-card" data-tags="アクション">
+    <div class="game-card" data-tags="アクション">
       <img class="card-image" src="./images/game-list/これぞ！大阪.png" alt="これぞ！大阪">
       <div class="card-body">
-        <div class="card-badge orange">アクション</div>
+        <div class="card-badge yellow">アクション</div>
         <div class="card-title">これぞ！大阪</div>
         <div class="card-desc">OSAKA キッズプログラミングコンテスト2022 最優秀賞受賞！大阪の魅力が学べるアクション</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <a href="detail-osaka.html" class="btn-detail-small">詳しく見る</a>
+          <a href="https://scratch.mit.edu/projects/795340064/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
-    </a>
+    </div>
     <div class="game-card" data-tags="アクション">
       <img class="card-image" src="./images/game-list/桜ソード３D.png" alt="桜ソード３D">
       <div class="card-body">
         <div class="card-badge yellow">アクション</div>
         <div class="card-title">桜ソード３D</div>
         <div class="card-desc">FunTechゲーム開発コンテスト3月 最優秀作品！春をモチーフにした3Dアクション</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/494134233/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
     <div class="game-card" data-tags="アクション">
@@ -265,16 +299,22 @@
         <div class="card-badge yellow">アクション</div>
         <div class="card-title">障害物避けゲーム</div>
         <div class="card-desc">迫りくる障害物をよけ続けろ！モバイル対応のアクションゲーム</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/649010057/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
     <div class="game-card" data-tags="シューティング">
       <img class="card-image" src="./images/game-list/シュウテ.png" alt="シュウテ">
       <div class="card-body">
-        <div class="card-badge blue">シューティング</div>
+        <div class="card-badge orange">シューティング</div>
         <div class="card-title">シュウテ</div>
         <div class="card-desc">ボスのドラゴンを倒せ！モバイル対応シューティングアクションゲーム</div>
-        <div class="card-link">詳しく見る →</div>
+        <div class="card-actions">
+          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
+          <a href="https://scratch.mit.edu/projects/380598487/" target="_blank" class="btn-play-small">▶ プレイ</a>
+        </div>
       </div>
     </div>
   </div>
