@@ -252,19 +252,32 @@
     .footer-links { display: flex; gap: 32px; align-items: center; }
     .footer-links a { font-size: 14px; color: #5A5A60; transition: color .2s; }
     .footer-links a:hover { color: #0A0A0B; }
+
+    /* Kiki Section */
+    .kiki-section {
+      background: #F2F2F4; padding: 60px 120px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .kiki-slider-wrapper { display: flex; align-items: center; gap: 12px; }
+    .kiki-cards { display: flex; gap: 16px; flex: 1; overflow: hidden; }
+    .kiki-card { flex: 1; border-radius: 12px; overflow: hidden; min-width: 0; }
+    .kiki-card img {
+      width: 100%; height: 240px; object-fit: contain;
+      display: block; background: #D8D8DC;
+    }
+    .section-title { font-family: 'Instrument Serif', serif; font-size: 40px; color: #0A0A0B; }
+    .section-desc { font-size: 40px; color: #5A5A60; line-height: 1.6; }
   </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-  <div class="logo">これぞ！大阪</div>
-  <nav>
-    <a href="index.html">ホーム</a>
-    <a href="index.html">ゲーム一覧</a>
-    <a href="#">About</a>
-  </nav>
-  <a href="https://scratch.mit.edu/projects/795340064/" target="_blank" class="btn-play">今すぐプレイ</a>
+  <a href="index.html" class="logo">Storm Philia Games</a>
+  <div style="display:flex; align-items:center; gap:24px; margin-left:auto;">
+    <span style="font-size:20px; font-weight:500; color:#0A0A0B;">大阪の文化を楽しみながら学ぼう</span>
+    <a href="https://scratch.mit.edu/projects/795340064/" target="_blank" class="btn-play">今すぐプレイ</a>
+  </div>
 </header>
 
 <!-- Hero -->
@@ -330,17 +343,17 @@
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-title"><i data-lucide="gamepad-2"></i>アクションゲーム</div>
-      <p class="feature-desc">大阪を舞台にしたアクションゲームをプレイ！ゲームをクリアするとアイテムをゲットできる。</p>
+      <p class="feature-desc">大阪を舞台にしたアクションゲームをプレイ！ゲームをクリアして、大阪にゆかりのあるアイテムをゲットしよう！</p>
       <img class="feature-card-img" src="./images/game/osaka/action.png" alt="アクションゲーム">
     </div>
     <div class="feature-card">
-      <div class="feature-title"><i data-lucide="house"></i>アイテム部屋</div>
-      <p class="feature-desc">ゲットしたアイテムを自分だけの部屋に飾れる。大阪にゆかりのあるアイテムを集めよう！</p>
+      <div class="feature-title"><i data-lucide="house"></i>自分の部屋</div>
+      <p class="feature-desc">ゲームでゲットしたアイテムを部屋に飾ることができる。自分だけの部屋を作ろう！</p>
       <img class="feature-card-img" src="./images/game/osaka/room.png" alt="アイテム部屋">
     </div>
     <div class="feature-card">
-      <div class="feature-title"><i data-lucide="book-open"></i>大阪コイン図書館</div>
-      <p class="feature-desc">獲得した大阪コインを使って大阪の歴史を読める。楽しみながら大阪のことを深く知れる。</p>
+      <div class="feature-title"><i data-lucide="book-open"></i>大阪について知る</div>
+      <p class="feature-desc">ゲームでゲットした大阪コインを使って大阪の歴史について知れる。楽しみながら大阪のことを知ろう！</p>
       <img class="feature-card-img" src="./images/game/osaka/library.png" alt="大阪コイン図書館">
     </div>
   </div>
@@ -351,18 +364,29 @@
   <div class="screenshots-header">
     <div class="eyebrow">GAMEPLAY</div>
     <h2 class="ss-title">大阪を感じるゲーム世界</h2>
-    <p class="ss-desc">大阪名所をモチーフにしたステージで戦い、大阪コインを集めてクリアしよう。部屋に飾ったアイテムが大阪の歴史への扉を開く。</p>
+    <p class="ss-desc">大阪の様々な時代をモチーフにしたステージを走り抜け、アイテムやコインをクリアしよう。</p>
   </div>
   <div class="viewer-wrapper">
     <button class="viewer-btn secondary" id="prevBtn">‹</button>
     <div class="main-content">
       <div class="main-image">
-        <img id="mainImg" src="./images/game/osaka/スクリーンショット 2026-03-28 184323.png" alt="screenshot">
+        <img id="mainImg" src="./images/game/osaka/action.png" alt="screenshot">
       </div>
       <div class="thumb-strip" id="thumbStrip"></div>
     </div>
     <button class="viewer-btn primary" id="nextBtn">›</button>
   </div>
+</section>
+
+<!-- Kiki Section -->
+<section class="kiki-section">
+  <h2 class="section-title">自分だけの部屋を作ろう</h2>
+  <div class="kiki-slider-wrapper">
+    <button class="viewer-btn secondary" id="kikiPrev">‹</button>
+    <div class="kiki-cards" id="kikiCards"></div>
+    <button class="viewer-btn primary" id="kikiNext">›</button>
+  </div>
+  <p class="section-desc">ゲームでゲットしたアイテムを部屋に飾って、自分だけの部屋を作れる。</p>
 </section>
 
 <!-- CTA Section -->
@@ -384,11 +408,9 @@
 
 <!-- Footer -->
 <footer>
-  <div class="footer-logo">これぞ！大阪</div>
+  <a href="index.html" class="footer-logo">Storm Philia Games</a>
   <div class="footer-links">
-    <a href="index.html">ホーム</a>
-    <a href="index.html">ゲーム一覧</a>
-    <a href="#">About</a>
+    <a href="#" style="font-size:18px;" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">ページのトップへ</a>
   </div>
 </footer>
 
@@ -397,19 +419,14 @@
 
   // Screenshots slider
   const ssImages = [
-    './images/game/osaka/スクリーンショット 2026-03-28 184323.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184341.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184355.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184408.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184506.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184519.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184738.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184808.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184925.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 184942.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 185000.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 185114.png',
-    './images/game/osaka/スクリーンショット 2026-03-28 185310.png',
+    './images/game/osaka/action.png',
+    './images/game/osaka/o14.png',
+    './images/game/osaka/o15.png',
+    './images/game/osaka/o16.png',
+    './images/game/osaka/o17.png',
+    './images/game/osaka/o5.png',
+    './images/game/osaka/o3.png',
+    './images/game/osaka/o18.png',
   ];
 
   let currentIndex = 0;
@@ -448,6 +465,46 @@
 
   document.getElementById('prevBtn').addEventListener('click', () => setImage(currentIndex - 1));
   document.getElementById('nextBtn').addEventListener('click', () => setImage(currentIndex + 1));
+
+  // Kiki slider
+  const kikiImages = [
+    './images/game/osaka/o20.png',
+    './images/game/osaka/o21.png',
+    './images/game/osaka/o4.png',
+    './images/game/osaka/o6.png',
+    './images/game/osaka/o8.png',
+    './images/game/osaka/o11.png',
+  ];
+
+  let kikiPage = 0;
+  const perPage = 3;
+  const kikiCards = document.getElementById('kikiCards');
+  const totalPages = Math.ceil(kikiImages.length / perPage);
+
+  function renderKiki() {
+    kikiCards.innerHTML = '';
+    const start = kikiPage * perPage;
+    kikiImages.slice(start, start + perPage).forEach(src => {
+      const card = document.createElement('div');
+      card.className = 'kiki-card';
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '部屋';
+      card.appendChild(img);
+      kikiCards.appendChild(card);
+    });
+  }
+
+  document.getElementById('kikiPrev').addEventListener('click', () => {
+    kikiPage = (kikiPage - 1 + totalPages) % totalPages;
+    renderKiki();
+  });
+  document.getElementById('kikiNext').addEventListener('click', () => {
+    kikiPage = (kikiPage + 1) % totalPages;
+    renderKiki();
+  });
+
+  renderKiki();
 </script>
 </body>
 </html>

@@ -42,7 +42,7 @@
               "id": "ekuze",
               "name": "logo",
               "fill": "#FF5C00",
-              "content": "ツインビー風ゲーム",
+              "content": "Storm Philia Games",
               "fontFamily": "DM Mono",
               "fontSize": 20,
               "fontWeight": "600",
@@ -1149,7 +1149,7 @@
               "id": "gdS2d",
               "name": "footerLogo",
               "fill": "#FF5C00",
-              "content": "ツインビー風ゲーム",
+              "content": "Storm Philia Games",
               "fontFamily": "DM Mono",
               "fontSize": 16,
               "fontWeight": "600",
@@ -1647,12 +1647,15 @@
                       "name": "card_nx_img",
                       "width": "fill_container",
                       "height": 220,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./images/game/img03.png",
-                        "mode": "fill"
-                      }
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game/img01.png",
+                          "mode": "fit"
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
@@ -1681,7 +1684,7 @@
                               "id": "mS2Ko",
                               "name": "card_nx_badgeText",
                               "fill": "#FF8A4C",
-                              "content": "アクションRPG",
+                              "content": "シューティング",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
@@ -1765,12 +1768,15 @@
                       "name": "card_sd_img",
                       "width": "fill_container",
                       "height": 220,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./images/generated-1773983134532.png",
-                        "mode": "fill"
-                      }
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/記憶ゲーム.png",
+                          "mode": "fit"
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
@@ -1785,7 +1791,7 @@
                           "type": "frame",
                           "id": "6RSJS",
                           "name": "card_sd_badge",
-                          "fill": "#0018FF18",
+                          "fill": "#00FF8018",
                           "cornerRadius": 100,
                           "gap": 6,
                           "padding": [
@@ -1798,8 +1804,8 @@
                               "type": "text",
                               "id": "vDUMq",
                               "name": "card_sd_badgeText",
-                              "fill": "#8A9EFF",
-                              "content": "スペースアドベンチャー",
+                              "fill": "#5AFF9E",
+                              "content": "脳トレ",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
@@ -1813,7 +1819,7 @@
                           "fill": "#0A0A0B",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "STELLAR DRIFT",
+                          "content": "記憶ゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 18,
                           "fontWeight": "600"
@@ -1825,7 +1831,7 @@
                           "fill": "#9A9AA0",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "広大な宇宙を旅する探索アドベンチャー",
+                          "content": "矢印の向きを記憶する、老若男女問わず楽しめる脳トレゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 13,
                           "fontWeight": "normal"
@@ -1873,12 +1879,15 @@
                       "name": "card_ev_img",
                       "width": "fill_container",
                       "height": 220,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./images/generated-1773983158284.png",
-                        "mode": "fill"
-                      }
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/Jamping Fight.png",
+                          "mode": "fit"
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
@@ -1893,7 +1902,7 @@
                           "type": "frame",
                           "id": "ij9tI",
                           "name": "card_ev_badge",
-                          "fill": "#00FF8018",
+                          "fill": "#FF5C0018",
                           "cornerRadius": 100,
                           "gap": 6,
                           "padding": [
@@ -1906,8 +1915,8 @@
                               "type": "text",
                               "id": "cd39h",
                               "name": "card_ev_badgeText",
-                              "fill": "#5AFF9E",
-                              "content": "パズルアドベンチャー",
+                              "fill": "#FF8A4C",
+                              "content": "対戦アクション",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
@@ -1921,7 +1930,7 @@
                           "fill": "#0A0A0B",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "ECHO VALLEY",
+                          "content": "Jamping Fight",
                           "fontFamily": "Inter",
                           "fontSize": 18,
                           "fontWeight": "600"
@@ -1933,7 +1942,7 @@
                           "fill": "#9A9AA0",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "謎に満ちた渓谷を探索するパズルゲーム",
+                          "content": "３つのボタンだけで楽しめる！シンプルでコンパクトな対戦アクション",
                           "fontFamily": "Inter",
                           "fontSize": 13,
                           "fontWeight": "normal"
@@ -1990,12 +1999,15 @@
                       "name": "card_ic_img",
                       "width": "fill_container",
                       "height": 220,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./images/generated-1773983174621.png",
-                        "mode": "fill"
-                      }
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/選択系ゲーム.png",
+                          "mode": "fit"
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
@@ -2010,7 +2022,7 @@
                           "type": "frame",
                           "id": "2l3WP",
                           "name": "card_ic_badge",
-                          "fill": "#FFAA0018",
+                          "fill": "#0018FF18",
                           "cornerRadius": 100,
                           "gap": 6,
                           "padding": [
@@ -2023,8 +2035,8 @@
                               "type": "text",
                               "id": "zbuuw",
                               "name": "card_ic_badgeText",
-                              "fill": "#FFCC5A",
-                              "content": "ストラテジー",
+                              "fill": "#8A9EFF",
+                              "content": "対戦",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
@@ -2038,7 +2050,7 @@
                           "fill": "#0A0A0B",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "IRON CITADEL",
+                          "content": "選択系ゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 18,
                           "fontWeight": "600"
@@ -2050,7 +2062,7 @@
                           "fill": "#9A9AA0",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "難攻不落の要塞を築く本格ストラテジー",
+                          "content": "運と頭脳が試される、コマンド対戦ゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 13,
                           "fontWeight": "normal"
@@ -2098,12 +2110,15 @@
                       "name": "card_pr_img",
                       "width": "fill_container",
                       "height": 220,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./images/generated-1773983190898.png",
-                        "mode": "fill"
-                      }
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/Chill Time.png",
+                          "mode": "fit"
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
@@ -2118,7 +2133,7 @@
                           "type": "frame",
                           "id": "6BxBs",
                           "name": "card_pr_badge",
-                          "fill": "#FF008018",
+                          "fill": "#00CCFF18",
                           "cornerRadius": 100,
                           "gap": 6,
                           "padding": [
@@ -2131,8 +2146,8 @@
                               "type": "text",
                               "id": "Ox7J9",
                               "name": "card_pr_badgeText",
-                              "fill": "#FF6A9E",
-                              "content": "レーシング",
+                              "fill": "#5ACCFF",
+                              "content": "チル",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
@@ -2146,7 +2161,7 @@
                           "fill": "#0A0A0B",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "PHANTOM RUSH",
+                          "content": "Chill Time",
                           "fontFamily": "Inter",
                           "fontSize": 18,
                           "fontWeight": "600"
@@ -2158,7 +2173,7 @@
                           "fill": "#9A9AA0",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "超高速バイクで駆け抜けるレーシングゲーム",
+                          "content": "時間を見ながらゆっくり遊びたい人におすすめのチルゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 13,
                           "fontWeight": "normal"
@@ -2206,12 +2221,15 @@
                       "name": "card_cd_img",
                       "width": "fill_container",
                       "height": 220,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./images/generated-1773983218263.png",
-                        "mode": "fill"
-                      }
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/果物取りゲーム.png",
+                          "mode": "fit"
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
@@ -2239,8 +2257,8 @@
                               "type": "text",
                               "id": "234RJ",
                               "name": "card_cd_badgeText",
-                              "fill": "#5ACCFF",
-                              "content": "探索",
+                              "fill": "#FFCC5A",
+                              "content": "アクション",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
@@ -2254,7 +2272,7 @@
                           "fill": "#0A0A0B",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "CRYSTAL DEPTHS",
+                          "content": "果物取りゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 18,
                           "fontWeight": "600"
@@ -2266,7 +2284,7 @@
                           "fill": "#9A9AA0",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "深海に眠る神秘の結晶を探す探索ゲーム",
+                          "content": "1回３０秒でおわる！シンプルかつ奥深い２Dアクションゲーム",
                           "fontFamily": "Inter",
                           "fontSize": 13,
                           "fontWeight": "normal"
@@ -2291,6 +2309,488 @@
                               "fontFamily": "Inter",
                               "fontSize": 13,
                               "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CIIj6",
+              "name": "gamesRow3",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kjYk3",
+                  "name": "card_os",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#F2F2F4",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8XXkT",
+                      "name": "card_os_img",
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/これぞ！大阪.png",
+                          "mode": "fit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xpG8T",
+                      "name": "card_os_info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "qVxvS",
+                          "name": "card_os_badge",
+                          "fill": "#FF5C0018",
+                          "cornerRadius": 100,
+                          "gap": 6,
+                          "padding": [
+                            3,
+                            10
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "0VzND",
+                              "fill": "#FF8A4C",
+                              "content": "アクション",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "XaFtD",
+                          "fill": "#0A0A0B",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "これぞ！大阪",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZBmPC",
+                          "fill": "#9A9AA0",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "OSAKA キッズプログラミングコンテスト2022 最優秀賞受賞！大阪の魅力が学べるアクション",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "e7LlW",
+                          "name": "card_os_btn",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ld5DI",
+                              "fill": "#FF5C00",
+                              "content": "詳しく見る",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "AxqXL",
+                              "width": 14,
+                              "height": 14,
+                              "iconFontName": "arrow-right",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "eu6Cl",
+                  "name": "card_sk",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#F2F2F4",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PO8dF",
+                      "name": "card_sk_img",
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/桜ソード３D.png",
+                          "mode": "fit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Dd63Q",
+                      "name": "card_sk_info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Eye0k",
+                          "name": "card_sk_badge",
+                          "fill": "#FF008018",
+                          "cornerRadius": 100,
+                          "gap": 6,
+                          "padding": [
+                            3,
+                            10
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ka6Hc",
+                              "fill": "#FF6A9E",
+                              "content": "3Dアクション",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "IuCVG",
+                          "fill": "#0A0A0B",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "桜ソード３D",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "J31C7",
+                          "fill": "#9A9AA0",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "FunTechゲーム開発コンテスト3月 最優秀作品！春をモチーフにした3Dアクション",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "j2gHB",
+                          "name": "card_sk_btn",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "E5Fox",
+                              "fill": "#FF5C00",
+                              "content": "詳しく見る",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "WtN9n",
+                              "width": 14,
+                              "height": 14,
+                              "iconFontName": "arrow-right",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oSmso",
+                  "name": "card_sh",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#F2F2F4",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xfoKL",
+                      "name": "card_sh_img",
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/障害物避けゲーム.png",
+                          "mode": "fit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ccyn6",
+                      "name": "card_sh_info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cy389",
+                          "name": "card_sh_badge",
+                          "fill": "#FFAA0018",
+                          "cornerRadius": 100,
+                          "gap": 6,
+                          "padding": [
+                            3,
+                            10
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AEsYb",
+                              "fill": "#FFCC5A",
+                              "content": "アクション",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "pQTmL",
+                          "fill": "#0A0A0B",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "障害物避けゲーム",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BJLvt",
+                          "fill": "#9A9AA0",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "迫りくる障害物をよけ続けろ！モバイル対応のアクションゲーム",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qH8MK",
+                          "name": "card_sh_btn",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ChY9g",
+                              "fill": "#FF5C00",
+                              "content": "詳しく見る",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "URAJ6",
+                              "width": 14,
+                              "height": 14,
+                              "iconFontName": "arrow-right",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0of5v",
+              "name": "gamesRow4",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rioin",
+                  "name": "card_sw",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#F2F2F4",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Kxrg3",
+                      "name": "card_sw_img",
+                      "width": "fill_container",
+                      "height": 220,
+                      "fill": [
+                        "#F2F2F4",
+                        {
+                          "type": "image",
+                          "enabled": true,
+                          "url": "./images/game-list/シュウテ.png",
+                          "mode": "fit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6baI6",
+                      "name": "card_sw_info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "eSwW5",
+                          "name": "card_sw_badge",
+                          "fill": "#0018FF18",
+                          "cornerRadius": 100,
+                          "gap": 6,
+                          "padding": [
+                            3,
+                            10
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aqn0L",
+                              "fill": "#8A9EFF",
+                              "content": "シューティング",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "ynj4i",
+                          "fill": "#0A0A0B",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "シュウテ",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iZU14",
+                          "fill": "#9A9AA0",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "ボスのドラゴンを倒せ！モバイル対応シューティングアクションゲーム",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IHDkq",
+                          "name": "card_sw_btn",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dnjpc",
+                              "fill": "#FF5C00",
+                              "content": "詳しく見る",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "t8vbv",
+                              "width": 14,
+                              "height": 14,
+                              "iconFontName": "arrow-right",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
                             }
                           ]
                         }
@@ -2433,7 +2933,7 @@
     {
       "type": "frame",
       "id": "QLRPy",
-      "x": 1640,
+      "x": 1641,
       "y": 0,
       "name": "これぞ！大阪 Detail Page",
       "width": 1440,
@@ -2459,54 +2959,25 @@
               "id": "yn29Y",
               "name": "logo",
               "fill": "#FF5C00",
-              "content": "これぞ！大阪",
+              "content": "Storm Philia Games",
               "fontFamily": "DM Mono",
               "fontSize": 20,
               "fontWeight": "600",
               "letterSpacing": 4
             },
             {
-              "type": "frame",
-              "id": "Suzs1",
-              "name": "nav",
-              "gap": 32,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "WlsRu",
-                  "name": "navTop",
-                  "fill": "#0A0A0B",
-                  "content": "ホーム",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "WMUdb",
-                  "name": "navGames",
-                  "fill": "#0A0A0B",
-                  "content": "ゲーム一覧",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "RcJkC",
-                  "name": "navAbout",
-                  "fill": "#0A0A0B",
-                  "content": "About",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
+              "type": "text",
+              "id": "aQmSx",
+              "name": "headerSubtitle",
+              "fill": "#0A0A0B",
+              "content": "大阪の文化を楽しみながら学ぼう",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "500"
             },
             {
               "type": "frame",
-              "id": "0rSLb",
+              "id": "38roF",
               "name": "headerBtn",
               "fill": "#FF5C00",
               "cornerRadius": 100,
@@ -2519,12 +2990,12 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "4YE06",
-                  "name": "headerBtnTxt",
-                  "fill": "#FFFFFF",
+                  "id": "GMr2L",
+                  "name": "headerBtnText",
+                  "fill": "#0A0A0B",
                   "content": "今すぐプレイ",
                   "fontFamily": "Inter",
-                  "fontSize": 14,
+                  "fontSize": 13,
                   "fontWeight": "600"
                 }
               ]
@@ -3545,6 +4016,198 @@
         },
         {
           "type": "frame",
+          "id": "pOrUS",
+          "name": "kikiSection",
+          "width": "fill_container",
+          "fill": "#F2F2F4",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            60,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "aPIv8",
+              "name": "kikiTitle",
+              "fill": "#0A0A0B",
+              "content": "自分だけの部屋を作ろう",
+              "fontFamily": "Instrument Serif",
+              "fontSize": 50,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "frame",
+              "id": "7bMHN",
+              "name": "sliderRow",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CUbR2",
+                  "name": "sliderLeft",
+                  "width": 48,
+                  "height": 48,
+                  "fill": "#F2F2F4",
+                  "cornerRadius": 24,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D0D0D5"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "EZzyF",
+                      "name": "sliderLeftIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "chevron-left",
+                      "iconFontFamily": "lucide",
+                      "fill": "#9A9AA0"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8BNFd",
+                  "name": "cards",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yBA8b",
+                      "name": "card1",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o20.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6ArHo",
+                      "name": "card2",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o21.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DQV0Q",
+                      "name": "card3",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o4.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G3cgU",
+                      "name": "card4",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o6.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "AEd2Y",
+                      "name": "card5",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o8.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T9qvN",
+                      "name": "card6",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/game/osaka/o11.png",
+                        "mode": "fit"
+                      },
+                      "cornerRadius": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "C0emO",
+                  "name": "sliderRight",
+                  "width": 48,
+                  "height": 48,
+                  "fill": "#FF5C00",
+                  "cornerRadius": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "csZIZ",
+                      "name": "sliderRightIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "RbYF1",
+              "name": "kikiDesc",
+              "fill": "#5A5A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "ゲームでゲットしたアイテムを部屋に飾って、自分だけの部屋を作れる。",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
           "id": "LfZj7",
           "name": "CTA Section",
           "width": "fill_container",
@@ -3697,7 +4360,7 @@
               "id": "N2qGn",
               "name": "footerLogo",
               "fill": "#FF5C00",
-              "content": "これぞ！大阪",
+              "content": "Storm Philia Games",
               "fontFamily": "DM Mono",
               "fontSize": 16,
               "fontWeight": "600",
@@ -3712,33 +4375,13 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "YRFOZ",
-                  "name": "fLink1",
-                  "fill": "#5A5A60",
-                  "content": "ホーム",
+                  "id": "0QMD3",
+                  "name": "footerLink",
+                  "fill": "#9A9AA0",
+                  "content": "ページのトップへ",
                   "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "kG8af",
-                  "name": "fLink2",
-                  "fill": "#5A5A60",
-                  "content": "ゲーム一覧",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "N3DTS",
-                  "name": "fLink3",
-                  "fill": "#5A5A60",
-                  "content": "About",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "fontSize": 18,
+                  "fontWeight": "500"
                 }
               ]
             }
