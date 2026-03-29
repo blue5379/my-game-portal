@@ -9,7 +9,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #fff; color: #0A0A0B; min-width: 1200px; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #0A0A0B; }
     a { text-decoration: none; color: inherit; }
 
     /* ── Header ── */
@@ -282,6 +282,44 @@
     }
     .section-title { font-family: 'Instrument Serif', serif; font-size: 40px; color: #0A0A0B; }
     .section-desc { font-size: 40px; color: #5A5A60; line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      header { padding: 0 20px; height: 60px; }
+      .logo { font-size: 14px; letter-spacing: 2px; }
+      header > div span { display: none; }
+      .btn-play { padding: 8px 16px; font-size: 12px; }
+      .hero { flex-direction: column; height: auto; padding: 32px 20px; gap: 24px; }
+      .hero-image { width: 100%; height: auto; }
+      .hero-title { font-size: 36px; }
+      .hero-desc { font-size: 15px; }
+      .hero-btns { flex-wrap: wrap; gap: 12px; }
+      .btn-primary, .btn-outline { font-size: 14px; padding: 12px 20px; }
+      .award-section { padding: 40px 20px; gap: 32px; }
+      .award-card { flex-direction: column; padding: 24px; gap: 24px; }
+      .award-right { width: 100%; }
+      .section-title { font-size: 28px; }
+      .features { padding: 40px 20px; gap: 32px; }
+      .features-title { font-size: 28px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .screenshots { padding: 40px 20px; gap: 24px; }
+      .ss-title { font-size: 28px; }
+      .main-image { height: 220px; }
+      .viewer-btn { width: 36px; height: 36px; font-size: 16px; }
+      .kiki-section { padding: 40px 20px; }
+      .section-desc { font-size: 20px; }
+      .kiki-card img { height: 140px; }
+      .zukan-section { padding: 40px 20px; }
+      .zukan-flow { flex-direction: column; }
+      .zukan-arrow { flex-direction: row; gap: 12px; }
+      .arrow-label { font-size: 16px; white-space: normal; }
+      .cta-section { padding: 48px 20px; }
+      .cta-title { font-size: 32px; }
+      .cta-sub { font-size: 15px; }
+      .cta-btns { flex-direction: column; width: 100%; }
+      .btn-cta-primary, .btn-cta-outline { width: 100%; justify-content: center; padding: 14px 20px; font-size: 15px; }
+      footer { flex-direction: column; gap: 12px; padding: 24px 20px; text-align: center; }
+      .footer-links { flex-direction: column; gap: 8px; }
+    }
   </style>
 </head>
 <body>
