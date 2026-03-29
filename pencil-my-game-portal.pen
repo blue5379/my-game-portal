@@ -325,42 +325,9 @@
                   "fill": "#F8F8FA",
                   "cornerRadius": 12,
                   "layout": "vertical",
-                  "gap": 20,
+                  "gap": 16,
                   "padding": 32,
                   "children": [
-                    {
-                      "type": "frame",
-                      "id": "a49n7",
-                      "name": "card1Icon",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "#FF5C0018",
-                      "cornerRadius": 10,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "7SRe0",
-                          "name": "card1IconInner",
-                          "width": 24,
-                          "height": 24,
-                          "iconFontName": "crosshair",
-                          "iconFontFamily": "lucide",
-                          "fill": "#FF5C00"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "SCEcz",
-                      "name": "card1Title",
-                      "fill": "#0A0A0B",
-                      "content": "シューティング",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "600"
-                    },
                     {
                       "type": "text",
                       "id": "nXCIN",
@@ -373,6 +340,48 @@
                       "fontFamily": "Inter",
                       "fontSize": 14,
                       "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w9WSC",
+                      "name": "titleRow1",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "a49n7",
+                          "name": "card1Icon",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#FF5C0018",
+                          "cornerRadius": 10,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "7SRe0",
+                              "name": "card1IconInner",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "crosshair",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "SCEcz",
+                          "name": "card1Title",
+                          "fill": "#0A0A0B",
+                          "content": "シューティング",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -384,42 +393,9 @@
                   "fill": "#F8F8FA",
                   "cornerRadius": 12,
                   "layout": "vertical",
-                  "gap": 20,
+                  "gap": 16,
                   "padding": 32,
                   "children": [
-                    {
-                      "type": "frame",
-                      "id": "DMSmv",
-                      "name": "card2Icon",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "#FF5C0018",
-                      "cornerRadius": 10,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "UIvK1",
-                          "name": "card2IconInner",
-                          "width": 24,
-                          "height": 24,
-                          "iconFontName": "settings",
-                          "iconFontFamily": "lucide",
-                          "fill": "#FF5C00"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "At6R3",
-                      "name": "card2Title",
-                      "fill": "#0A0A0B",
-                      "content": "ドットで彩られる世界",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "600"
-                    },
                     {
                       "type": "text",
                       "id": "PkSFj",
@@ -432,6 +408,48 @@
                       "fontFamily": "Inter",
                       "fontSize": 14,
                       "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xJcVK",
+                      "name": "titleRow2",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DMSmv",
+                          "name": "card2Icon",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#FF5C0018",
+                          "cornerRadius": 10,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "UIvK1",
+                              "name": "card2IconInner",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "settings",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "At6R3",
+                          "name": "card2Title",
+                          "fill": "#0A0A0B",
+                          "content": "ドットで彩られる世界",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -443,42 +461,9 @@
                   "fill": "#F8F8FA",
                   "cornerRadius": 12,
                   "layout": "vertical",
-                  "gap": 20,
+                  "gap": 16,
                   "padding": 32,
                   "children": [
-                    {
-                      "type": "frame",
-                      "id": "MCvbl",
-                      "name": "card3Icon",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "#FF5C0018",
-                      "cornerRadius": 10,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "W62fe",
-                          "name": "card3IconInner",
-                          "width": 24,
-                          "height": 24,
-                          "iconFontName": "book-open",
-                          "iconFontFamily": "lucide",
-                          "fill": "#FF5C00"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "t6Xd2",
-                      "name": "card3Title",
-                      "fill": "#0A0A0B",
-                      "content": "充実したやりこみ要素",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "600"
-                    },
                     {
                       "type": "text",
                       "id": "6YMsm",
@@ -491,6 +476,48 @@
                       "fontFamily": "Inter",
                       "fontSize": 14,
                       "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Yi9Vz",
+                      "name": "titleRow3",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MCvbl",
+                          "name": "card3Icon",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#FF5C0018",
+                          "cornerRadius": 10,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "W62fe",
+                              "name": "card3IconInner",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "book-open",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FF5C00"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "t6Xd2",
+                          "name": "card3Title",
+                          "fill": "#0A0A0B",
+                          "content": "充実したやりこみ要素",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        }
+                      ]
                     }
                   ]
                 }
