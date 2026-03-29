@@ -1317,16 +1317,6 @@
                   "fontSize": 28,
                   "fontWeight": "600",
                   "letterSpacing": -1
-                },
-                {
-                  "type": "text",
-                  "id": "JnOcc",
-                  "name": "pickupMore",
-                  "fill": "#FF5C00",
-                  "content": "すべて見る →",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "500"
                 }
               ]
             },
@@ -1585,7 +1575,7 @@
                           "id": "siw97",
                           "name": "filter3Text",
                           "fill": "#5A5A60",
-                          "content": "RPG",
+                          "content": "シューティング",
                           "fontFamily": "Inter",
                           "fontSize": 12,
                           "fontWeight": "500"
@@ -1613,7 +1603,61 @@
                           "id": "tmI9b",
                           "name": "filter4Text",
                           "fill": "#5A5A60",
-                          "content": "パズル",
+                          "content": "対戦",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FAdgs",
+                      "name": "filter5",
+                      "fill": "#F8F8FA",
+                      "cornerRadius": 100,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D0D0D5"
+                      },
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "k0wqJ",
+                          "fill": "#5A5A60",
+                          "content": "脳トレ",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yeXn4",
+                      "name": "filter6",
+                      "fill": "#F8F8FA",
+                      "cornerRadius": 100,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#D0D0D5"
+                      },
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MUOXy",
+                          "fill": "#5A5A60",
+                          "content": "チル",
                           "fontFamily": "Inter",
                           "fontSize": 12,
                           "fontWeight": "500"
@@ -1900,26 +1944,55 @@
                       "children": [
                         {
                           "type": "frame",
-                          "id": "ij9tI",
-                          "name": "card_ev_badge",
-                          "fill": "#FF5C0018",
-                          "cornerRadius": 100,
+                          "id": "KadQs",
+                          "name": "card_ev_badges",
                           "gap": 6,
-                          "padding": [
-                            3,
-                            10
-                          ],
-                          "alignItems": "center",
                           "children": [
                             {
-                              "type": "text",
-                              "id": "cd39h",
-                              "name": "card_ev_badgeText",
-                              "fill": "#FF8A4C",
-                              "content": "対戦アクション",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "600"
+                              "type": "frame",
+                              "id": "bCxcx",
+                              "name": "badge_taisen",
+                              "fill": "#0018FF18",
+                              "cornerRadius": 100,
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "PtMVm",
+                                  "fill": "#8A9EFF",
+                                  "content": "対戦",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "McgMM",
+                              "name": "badge_action",
+                              "fill": "#FFAA0018",
+                              "cornerRadius": 100,
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Rt6Af",
+                                  "fill": "#FFCC5A",
+                                  "content": "アクション",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2480,7 +2553,7 @@
                           "type": "frame",
                           "id": "Eye0k",
                           "name": "card_sk_badge",
-                          "fill": "#FF008018",
+                          "fill": "#FFAA0018",
                           "cornerRadius": 100,
                           "gap": 6,
                           "padding": [
@@ -2492,8 +2565,8 @@
                             {
                               "type": "text",
                               "id": "ka6Hc",
-                              "fill": "#FF6A9E",
-                              "content": "3Dアクション",
+                              "fill": "#FFCC5A",
+                              "content": "アクション",
                               "fontFamily": "Inter",
                               "fontSize": 11,
                               "fontWeight": "600"
