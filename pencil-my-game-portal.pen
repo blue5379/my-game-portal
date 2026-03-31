@@ -3320,45 +3320,6 @@
                           "fontWeight": "600"
                         }
                       ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "yezQ5",
-                      "name": "interviewBtn",
-                      "fill": "#FFFFFF",
-                      "cornerRadius": 100,
-                      "stroke": {
-                        "thickness": 1.5,
-                        "fill": "#E2E2E6"
-                      },
-                      "gap": 8,
-                      "padding": [
-                        14,
-                        32
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "he9zO",
-                          "name": "linkIcon",
-                          "width": 16,
-                          "height": 16,
-                          "iconFontName": "external-link",
-                          "iconFontFamily": "lucide",
-                          "fill": "#5A5A60"
-                        },
-                        {
-                          "type": "text",
-                          "id": "edJh0",
-                          "name": "interviewBtnTxt",
-                          "fill": "#5A5A60",
-                          "content": "受賞インタビューを読む",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "500"
-                        }
-                      ]
                     }
                   ]
                 }
@@ -4617,45 +4578,6 @@
                       "fontFamily": "Inter",
                       "fontSize": 16,
                       "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "SI3ZQ",
-                  "name": "ctaInterBtn",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 100,
-                  "stroke": {
-                    "thickness": 1.5,
-                    "fill": "#E2E2E6"
-                  },
-                  "gap": 8,
-                  "padding": [
-                    16,
-                    40
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "TNBJv",
-                      "name": "ctaInterIcon",
-                      "width": 16,
-                      "height": 16,
-                      "iconFontName": "newspaper",
-                      "iconFontFamily": "lucide",
-                      "fill": "#5A5A60"
-                    },
-                    {
-                      "type": "text",
-                      "id": "AKTWH",
-                      "name": "ctaInterTxt",
-                      "fill": "#5A5A60",
-                      "content": "受賞インタビュー記事",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "500"
                     }
                   ]
                 }
