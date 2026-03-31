@@ -101,12 +101,12 @@
 
     .game-card {
       background: #F2F2F4; border-radius: 12px; overflow: hidden;
-      display: block; cursor: pointer;
+      display: block;
       transition: transform .2s, box-shadow .2s;
     }
     .game-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.1); }
 
-    .card-image { width: 100%; height: auto; display: block; }
+    .card-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
     .card-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
     .card-badge {
       display: inline-flex; align-items: center;
@@ -122,7 +122,7 @@
 
     .card-title { font-size: 18px; font-weight: 600; color: #0A0A0B; }
     .card-desc { font-size: 13px; color: #9A9AA0; }
-    .card-actions { display: flex; align-items: center; gap: 12px; padding: 10px 0; }
+    .card-actions { display: flex; align-items: center; gap: 12px; padding: 10px 0; min-height: 52px; }
     .btn-detail-small {
       display: inline-flex; align-items: center; gap: 6px;
       padding: 7px 16px; background: transparent; color: #FF5C00;
@@ -240,8 +240,7 @@
         <div class="card-title">記憶ゲーム</div>
         <div class="card-desc">矢印の向きを記憶する、老若男女問わず楽しめる脳トレゲーム</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/1293856578/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/1293856578/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -255,8 +254,7 @@
         <div class="card-title">Jamping Fight</div>
         <div class="card-desc">３つのボタンだけで楽しめる！シンプルでコンパクトな対戦アクション</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/1204925464/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/1204925464/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -267,8 +265,7 @@
         <div class="card-title">選択系ゲーム</div>
         <div class="card-desc">運と頭脳が試される、コマンド対戦ゲーム</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/1160900045/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/1160900045/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -279,8 +276,7 @@
         <div class="card-title">Chill Time</div>
         <div class="card-desc">時間を見ながらゆっくり遊びたい人におすすめのチルゲーム</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/1188830395/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/1188830395/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -291,8 +287,7 @@
         <div class="card-title">果物取りゲーム</div>
         <div class="card-desc">1回３０秒でおわる！シンプルかつ奥深い２Dアクションゲーム</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/1176640785/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/1176640785/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -315,8 +310,7 @@
         <div class="card-title">桜ソード３D</div>
         <div class="card-desc">FunTechゲーム開発コンテスト3月 最優秀作品！春をモチーフにした3Dアクション</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/494134233/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/494134233/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -327,8 +321,7 @@
         <div class="card-title">障害物避けゲーム</div>
         <div class="card-desc">迫りくる障害物をよけ続けろ！モバイル対応のアクションゲーム</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/649010057/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/649010057/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
@@ -339,8 +332,7 @@
         <div class="card-title">シュウテ</div>
         <div class="card-desc">ボスのドラゴンを倒せ！モバイル対応シューティングアクションゲーム</div>
         <div class="card-actions">
-          <span class="btn-detail-small" style="visibility:hidden" aria-hidden="true">詳しく見る</span>
-          <a href="https://scratch.mit.edu/projects/380598487/" target="_blank" class="btn-play-small">▶ プレイ</a>
+<a href="https://scratch.mit.edu/projects/380598487/" target="_blank" class="btn-play-small">▶ プレイ</a>
         </div>
       </div>
     </div>
