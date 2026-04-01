@@ -1220,7 +1220,19 @@
           "name": "Header",
           "width": "fill_container",
           "height": 80,
-          "fill": "#F2F2F4",
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "#FF5C00"
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 12,
+            "enabled": false
+          },
           "padding": [
             0,
             60
@@ -2907,7 +2919,14 @@
           "id": "Ksp3M",
           "name": "Footer",
           "width": "fill_container",
-          "fill": "#F2F2F4",
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "top": 2
+            },
+            "fill": "#FF5C00"
+          },
           "padding": [
             40,
             60
