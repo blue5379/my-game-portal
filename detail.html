@@ -434,7 +434,7 @@
   ];
 
   let kikiPage = 0;
-  const perPage = 3;
+  const perPage = window.innerWidth <= 768 ? 1 : 3;
   const kikiCards = document.getElementById('kikiCards');
   const totalPages = Math.ceil(kikiImages.length / perPage);
 
