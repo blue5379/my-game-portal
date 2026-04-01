@@ -14,8 +14,14 @@
     /* Header */
     header {
       display: flex; align-items: center; justify-content: space-between;
-      height: 80px; padding: 0 60px; background: #F2F2F4;
+      height: 80px; padding: 0 60px; background: #FFFFFF;
+      border-bottom: 2px solid #FF5C00;
       position: sticky; top: 0; z-index: 100;
+      transition: background .3s, backdrop-filter .3s;
+    }
+    header.scrolled {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
     }
     .logo {
       font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 600;
@@ -200,7 +206,7 @@
     /* Footer */
     footer {
       display: flex; align-items: center; justify-content: space-between;
-      background: #F2F2F4; padding: 40px 60px;
+      background: #FFFFFF; border-top: 2px solid #FF5C00; padding: 40px 60px;
     }
     .footer-logo {
       font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 600;
@@ -357,6 +363,10 @@
 </footer>
 
 <script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
   // Screenshots slider
   const screenshotImages = [
     './images/game/img01.png',
