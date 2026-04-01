@@ -289,7 +289,9 @@
     .section-title { font-family: 'Instrument Serif', serif; font-size: 40px; color: #0A0A0B; }
     .section-desc { font-size: 40px; color: #5A5A60; line-height: 1.6; }
 
+    #kikiCopyPrev, #kikiCopyNext { display: none; }
     @media (max-width: 768px) {
+      #kikiCopyPrev, #kikiCopyNext { display: flex; }
       header { padding: 0 20px; height: 60px; }
       .logo { font-size: 14px; letter-spacing: 2px; }
       header > div span { display: none; }
@@ -462,7 +464,9 @@
 <section class="kiki-section">
   <h2 class="section-title">自分だけの部屋をつくろう！</h2>
   <div class="kiki-slider-wrapper">
+    <button class="viewer-btn secondary" id="kikiCopyPrev">‹</button>
     <div class="kiki-cards" id="kikiCopyCards"></div>
+    <button class="viewer-btn primary" id="kikiCopyNext">›</button>
   </div>
   <p class="section-desc">ゲームでゲットしたアイテムを自分の置きたい場所に置いて、"自分の"部屋をつくろう！</p>
 </section>
@@ -555,7 +559,7 @@
   ];
 
   let kikiPage = 0;
-  const perPage = 3;
+  const perPage = window.innerWidth <= 768 ? 1 : 3;
   const kikiCards = document.getElementById('kikiCards');
   const totalPages = Math.ceil(kikiImages.length / perPage);
 
@@ -593,7 +597,7 @@
   ];
 
   let kikiCopyPage = 0;
-  const perPageCopy = 4;
+  const perPageCopy = window.innerWidth <= 768 ? 1 : 4;
   const kikiCopyCards = document.getElementById('kikiCopyCards');
   const totalPagesCopy = Math.ceil(kikiCopyImages.length / perPageCopy);
 
@@ -610,6 +614,15 @@
       kikiCopyCards.appendChild(card);
     });
   }
+
+  document.getElementById('kikiCopyPrev').addEventListener('click', () => {
+    kikiCopyPage = (kikiCopyPage - 1 + totalPagesCopy) % totalPagesCopy;
+    renderKikiCopy();
+  });
+  document.getElementById('kikiCopyNext').addEventListener('click', () => {
+    kikiCopyPage = (kikiCopyPage + 1) % totalPagesCopy;
+    renderKikiCopy();
+  });
 
   renderKikiCopy();
 </script>
